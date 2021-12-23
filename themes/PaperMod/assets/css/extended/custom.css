@@ -1,0 +1,79 @@
+.chroma {
+  background-color: #282a36;
+}
+
+.highlight > div {
+  border-radius: 10%;
+}
+
+code {
+  background-color: #282a36 !important;
+}
+
+.logo-switches {
+  margin: 0;
+}
+
+button#theme-toggle {
+  margin: 0;
+  margin-left: 14px;
+}
+
+img[src*="#me"] {
+  margin-right: 15px;
+  border-radius: 10%;
+  height: calc(180px + 4vw);
+  border: 2px solid rgb(155, 156, 157);
+  align-self: center;
+}
+
+.home-info {
+  margin-top: 48px;
+  margin-bottom: 0px;
+}
+
+#entry-main-container {
+  display: flex;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.social-icons a:not(:last-of-type) {
+  margin-inline-end: 18px;
+}
+
+.footer * {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 530px) {
+  .social-icons {
+    justify-content: space-evenly;
+  }
+  #entry-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+  img[src*="#me"] {
+    height: calc(220px + 4vw);
+    margin-right: 0px;
+    margin-bottom: 24px;
+    align-self: center;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-info {
+    margin-top: 14px;
+  }
+  .footer span:last-child {
+    white-space: normal;
+}
+}
