@@ -10,8 +10,6 @@ printf "\033[0;32mDeploying updates to GitHub…\033[0m\n"
 
 # Go To Public folder 
 public
-pwd
-git status
 
 # Add changes to git. 
 git add . 
