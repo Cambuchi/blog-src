@@ -3,7 +3,7 @@
 set -e
 
 # Status message
-printf "\033[0;32mDeploying build-updates to GitHub…\033[0m\n" 
+printf "\033[0;32mUpdating build to GitHub…\033[0m\n" 
 
 # Update with any commits the CMS might have added
 git pull
