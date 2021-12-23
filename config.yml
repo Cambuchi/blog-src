@@ -18,7 +18,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Cam's Jams
   description: "Cam's personal blog."
-  keywords: [Blog, Portfolio, Hugo, PaperMod]
+  keywords: [Blog, Portfolio, Hugo, PaperMod, Forestry, Javascript]
   author: Cam Nguyen
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
