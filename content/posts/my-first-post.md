@@ -1,36 +1,33 @@
 ---
 title: My First Post
 date: 2021-12-22T13:53:01.000-08:00
-# weight: 1
-# aliases: ["/first"]
-tags: ["first"]
-author: "Me"
-# author: ["Me", "You"] # multiple authors
+tags:
+- first
+author: Me
 showToc: true
 TocOpen: false
-draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
+description: Desc Text.
+canonicalURL: https://canonical.url/to/page
 disableHLJS: false
+disableShare: false
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-    image: "https://www.theodinproject.com/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg" # image path/url
-    alt: "test alt" # alt text
-    caption: "test caption" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: false # only hide on current single page
+  image: https://www.theodinproject.com/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg
+  alt: test alt
+  caption: test caption
+  relative: false
+  hidden: false
 editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+  URL: https://github.com/<path_to_repo>/content
+  Text: Suggest Changes
+  appendFilePath: true
+
 ---
 Some text above
 
@@ -107,11 +104,11 @@ let Cam = Person('Cam', '30');
 {{< highlight js >}}
 
 const primes = num => {
-  let arr = Array.from({ length: num - 1 }).map((x, i) => i + 2),
-    sqroot = Math.floor(Math.sqrt(num)),
-    numsTillSqroot = Array.from({ length: sqroot - 1 }).map((x, i) => i + 2);
-  numsTillSqroot.forEach(x => (arr = arr.filter(y => y % x !== 0 || y === x)));
-  return arr;
+let arr = Array.from({ length: num - 1 }).map((x, i) => i + 2),
+sqroot = Math.floor(Math.sqrt(num)),
+numsTillSqroot = Array.from({ length: sqroot - 1 }).map((x, i) => i + 2);
+numsTillSqroot.forEach(x => (arr = arr.filter(y => y % x !== 0 || y === x)));
+return arr;
 };
 
 {{< /highlight >}}
@@ -121,32 +118,55 @@ const primes = num => {
 // when trash icon is clicked, display modal and change onclick functionality to match
 // target element actions
 const clickTrashIcon = (data, element) => {
-  // display confirmation modal
-  const modal = document.getElementById('modal-confirm');
-  modal.style.display = 'flex';
-  // remove previous onclick functions
-  const confirm = document.getElementById('modal-confirm-submit');
-  confirm.onclick = null;
-  // onclick logic for when group trash items are clicked
-  if (element.classList.contains('group-item')) {
-    confirm.onclick = function deleteGroup() {
-      DOM.clickGroupTrash(element);
-      Logic.deleteGroup(data, element.textContent);
-      DataStorage.setLocalStorage('todolist', data);
-      modal.style.display = 'none';
-    };
-    // onclick logic for when tasks are being trashed
-  } else if (element.classList.contains('task')) {
-    confirm.onclick = function deleteTask() {
-      const currentGroup = document.getElementById('main-header-title').textContent;
-      Logic.deleteTask(data[currentGroup], element.id);
-      Logic.renumberTasks(data[currentGroup].tasks);
-      DOM.populateTasks(data, currentGroup);
-      DataStorage.setLocalStorage('todolist', data);
-      modal.style.display = 'none';
-    };
-  }
+// display confirmation modal
+const modal = document.getElementById('modal-confirm');
+modal.style.display = 'flex';
+// remove previous onclick functions
+const confirm = document.getElementById('modal-confirm-submit');
+confirm.onclick = null;
+// onclick logic for when group trash items are clicked
+if (element.classList.contains('group-item')) {
+confirm.onclick = function deleteGroup() {
+DOM.clickGroupTrash(element);
+Logic.deleteGroup(data, element.textContent);
+DataStorage.setLocalStorage('todolist', data);
+modal.style.display = 'none';
+};
+// onclick logic for when tasks are being trashed
+} else if (element.classList.contains('task')) {
+confirm.onclick = function deleteTask() {
+const currentGroup = document.getElementById('main-header-title').textContent;
+Logic.deleteTask(data\[currentGroup\], element.id);
+Logic.renumberTasks(data\[currentGroup\].tasks);
+DOM.populateTasks(data, currentGroup);
+DataStorage.setLocalStorage('todolist', data);
+modal.style.display = 'none';
+};
+}
 };
 
+{{< /highlight >}}
+
+Last but not least let's see how this works in practice.
+
+{{< highlight js >}}
+
+    //play a move (move is an index on the board)
+    play(move) {
+    //if board index is not empty (0) or game is in win condition, invalid move
+    if (this.board[move] !== 0 || this.isWin) {
+    return false;
+    }
+    //plays a 1 or 2 on the board (representing X or O)
+    this.board[move] = this.turn;
+    this.moves.push(move);
+    //checks the board and updates the game state if needed
+    // Use regular expression to detect any 3-in-a-row
+    this.isWin = /^(?:...)*([12])\1\1|^.?.?([12])..\2..\2|^([12])...\3...\3|^..([12]).\4.\4/.test(this.board.join(""));
+    this.isDraw = !this.isWin && this.moves.length === this.board.length;
+    return true;
+    }
 
 {{< /highlight >}}
+
+Did that work?
