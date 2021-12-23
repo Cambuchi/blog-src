@@ -2,6 +2,7 @@ baseURL: "https://cambuchi.github.io/blog"
 title: Cam Nguyen | Blog
 paginate: 5
 theme: "PaperMod"
+copyright: © [Cam Nguyen](https://cambuchi.github.io/blog).
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -79,7 +80,7 @@ params:
       who is currently trying to become a software developer.  
 
       
-      -  
+      - 
 
 
       - You can reach me at cam.manh.nguyen@gmail.com. 

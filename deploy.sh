@@ -1,12 +1,17 @@
 #!/bin/sh
-# If any part of the script fails the deploy stops 
+# Source the public directory to cd into
+source ./path.sh
+
+# If any part of the script fails the deploy stops
 set -e
 
 # Status message
 printf "\033[0;32mDeploying updates to GitHub…\033[0m\n" 
 
 # Go To Public folder 
-cd public 
+public
+pwd
+git status
 
 # Add changes to git. 
 git add . 
