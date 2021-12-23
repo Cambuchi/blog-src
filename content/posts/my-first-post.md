@@ -60,95 +60,64 @@ how about `inline` code?
 lastly let's check if the hugo method works
 
 {{< highlight html >}}
-<section id="main">
-<div>
-<h1 id="title">{{ .Title }}</h1>
-{{ range .Pages }}
-{{ .Render "summary"}}
-{{ end }}
-</div>
-</section>
+`<section id="main"> <div> <h1 id="title">{{ .Title }}</h1> {{ range .Pages }} {{ .Render "summary"}} {{ end }} </div> </section>`
 {{< /highlight >}}
 
 follow up with some JS
 
 {{< highlight js >}}
+
 const Person = (name, age) => {
-const sayName = () => console.log(name)
-}
+
+    const sayName = () => console.log(name) } 
+
 let Cam = Person('Cam', '30');
+
 {{< /highlight >}}
 
 {{< highlight js >}}
 
-    const primes = num => {
-      let arr = Array.from({ length: num - 1 }).map((x, i) => i + 2),
-        sqroot = Math.floor(Math.sqrt(num)),
-        numsTillSqroot = Array.from({ length: sqroot - 1 }).map((x, i) => i + 2);
-      numsTillSqroot.forEach(x => (arr = arr.filter(y => y % x !== 0 || y === x)));
-      return arr;
-    };
+const primes = num => {
+  let arr = Array.from({ length: num - 1 }).map((x, i) => i + 2),
+    sqroot = Math.floor(Math.sqrt(num)),
+    numsTillSqroot = Array.from({ length: sqroot - 1 }).map((x, i) => i + 2);
+  numsTillSqroot.forEach(x => (arr = arr.filter(y => y % x !== 0 || y === x)));
+  return arr;
+};
 
 {{< /highlight >}}
 
 {{< highlight js >}}
 
 // when trash icon is clicked, display modal and change onclick functionality to match
-
 // target element actions
-
-_const_ clickTrashIcon = (_data_, _element_) _=>_ {
-
-// display confirmation modal
-
-_const_ modal = document.getElementById('modal-confirm');
-
- modal.style.display = 'flex';
-
-// remove previous onclick functions
-
-_const_ confirm = document.getElementById('modal-confirm-submit');
-
- confirm.onclick = null;
-
-// onclick logic for when group trash items are clicked
-
-if (element.classList.contains('group-item')) {
-
- confirm.onclick = _function_ deleteGroup() {
-
- DOM.clickGroupTrash(element);
-
- Logic.deleteGroup(data, element.textContent);
-
- DataStorage.setLocalStorage('todolist', data);
-
- modal.style.display = 'none';
-
- };
-
-// onclick logic for when tasks are being trashed
-
- } else if (element.classList.contains('task')) {
-
- confirm.onclick = _function_ deleteTask() {
-
-_const_ currentGroup = document.getElementById('main-header-title').textContent;
-
- Logic.deleteTask(data\[currentGroup\], element.id);
-
- Logic.renumberTasks(data\[currentGroup\].tasks);
-
- DOM.populateTasks(data, currentGroup);
-
- DataStorage.setLocalStorage('todolist', data);
-
- modal.style.display = 'none';
-
- };
-
- }
-
+const clickTrashIcon = (data, element) => {
+  // display confirmation modal
+  const modal = document.getElementById('modal-confirm');
+  modal.style.display = 'flex';
+  // remove previous onclick functions
+  const confirm = document.getElementById('modal-confirm-submit');
+  confirm.onclick = null;
+  // onclick logic for when group trash items are clicked
+  if (element.classList.contains('group-item')) {
+    confirm.onclick = function deleteGroup() {
+      DOM.clickGroupTrash(element);
+      Logic.deleteGroup(data, element.textContent);
+      DataStorage.setLocalStorage('todolist', data);
+      modal.style.display = 'none';
+    };
+    // onclick logic for when tasks are being trashed
+  } else if (element.classList.contains('task')) {
+    confirm.onclick = function deleteTask() {
+      const currentGroup = document.getElementById('main-header-title').textContent;
+      Logic.deleteTask(data[currentGroup], element.id);
+      Logic.renumberTasks(data[currentGroup].tasks);
+      DOM.populateTasks(data, currentGroup);
+      DataStorage.setLocalStorage('todolist', data);
+      modal.style.display = 'none';
+    };
+  }
 };
+
 
 {{< /highlight >}}
