@@ -150,21 +150,43 @@ modal.style.display = 'none';
 Last but not least let's see how this works in practice.
 
 {{< highlight js >}}
-    //play a move (move is an index on the board)
-    play(move) {
-        //if board index is not empty (0) or game is in win condition, invalid move
-        if (this.board[move] !== 0 || this.isWin) {
-            return false;
-         }
-         //plays a 1 or 2 on the board (representing X or O)
-        this.board[move] = this.turn;
-        this.moves.push(move);
-        //checks the board and updates the game state if needed
-        // Use regular expression to detect any 3-in-a-row
-        this.isWin = /^(?:...)*([12])\1\1|^.?.?([12])..\2..\2|^([12])...\3...\3|^..([12]).\4.\4/.test(this.board.join(""));
-        this.isDraw = !this.isWin && this.moves.length === this.board.length;
-        return true;
-    }
+//play a move (move is an index on the board)
+play(move) {
+//if board index is not empty (0) or game is in win condition, invalid move
+if (this.board\[move\] !== 0 || this.isWin) {
+return false;
+}
+//plays a 1 or 2 on the board (representing X or O)
+this.board\[move\] = this.turn;
+this.moves.push(move);
+//checks the board and updates the game state if needed
+// Use regular expression to detect any 3-in-a-row
+this.isWin = /^(?:...)*(\[12\])\\1\\1|^.?.?(\[12\])..\\2..\\2|^(\[12\])...\\3...\\3|^..(\[12\]).\\4.\\4/.test(this.board.join(""));
+this.isDraw = !this.isWin && this.moves.length === this.board.length;
+return true;
+}
 {{< /highlight >}}
 
 Did that work?
+
+Final test...? maybe.
+
+```js
+//play a move (move is an index on the board)
+play(move) {
+    //if board index is not empty (0) or game is in win condition, invalid move
+    if (this.board[move] !== 0 || this.isWin) {
+        return false;
+     }
+     //plays a 1 or 2 on the board (representing X or O)
+    this.board[move] = this.turn;
+    this.moves.push(move);
+    //checks the board and updates the game state if needed
+    // Use regular expression to detect any 3-in-a-row
+    this.isWin = /^(?:...)*([12])\1\1|^.?.?([12])..\2..\2|^([12])...\3...\3|^..([12]).\4.\4/.test(this.board.join(""));
+    this.isDraw = !this.isWin && this.moves.length === this.board.length;
+    return true;
+}
+```
+
+Complete?
