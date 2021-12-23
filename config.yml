@@ -1,5 +1,5 @@
 baseURL: "https://cambuchi.github.io/blog"
-title: Cam Nguyen | Blog
+title: cam nguyen | blog
 paginate: 5
 theme: "PaperMod"
 copyright: © [Cam Nguyen](https://cambuchi.github.io/blog).
@@ -15,11 +15,17 @@ minify:
   disableXML: true
   minifyOutput: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Cam Nguyen | Blog
+  title: cam nguyen | blog
   description: "Cam's personal blog."
-  keywords: [Blog, Portfolio, Hugo, PaperMod, Forestry, Javascript]
+  keywords: [Blog, Portfolio, Coding]
   # author: Cam Nguyen
   # author: ["Me", "You"] # multiple authors
   images: ["catgod.jpg"]
@@ -50,9 +56,9 @@ params:
     safari_pinned_tab: "favicon-32x32.png"
 
   label:
-    text: "Cam Nguyen | Blog"
-    # icon: apple-touch-icon.png
-    # iconHeight: 25
+    text: "cam nguyen | blog"
+    # icon: teapot.png
+    # iconHeight: 35
 
   # profile-mode
   profileMode:
@@ -76,8 +82,8 @@ params:
       ![Cam Nguyen Headshot](me.jpg#me)
     Content: 
       Welcome to my blog. This is a place for me to mostly talk about my
-      developments in coding. I am a first generation immigrant from Vietnam 
-      who is currently trying to become a software developer.  
+      developments in coding. Based in California, I am a first generation 
+      immigrant from Vietnam currently trying to become a software developer.  
 
       
       - 
@@ -108,7 +114,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/Cambuchi/blog-src/blob/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -124,18 +130,22 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 1
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 2
     - identifier: projects
       name: projects
-      url: /tags/
-      weight: 20
+      url: /projects/
+      weight: 3
     - identifier: resume
       name: resume
       url: https://example.org
-      weight: 30
+      weight: 4
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: false
 markup:
@@ -144,6 +154,6 @@ markup:
         codeFences: true
         guessSyntax: true
         lineNos: true
-        style: vulcan
+        style: base16-snazzy
         # noClasses: true
         tabWidth: 2
