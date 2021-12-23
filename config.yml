@@ -131,6 +131,6 @@ markup:
         codeFences: true
         guessSyntax: true
         lineNos: true
-        style: dracula
+        style: vulcan
         # noClasses: true
         tabWidth: 4
