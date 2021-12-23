@@ -1,7 +1,7 @@
 baseURL: "https://cambuchi.github.io/blog"
 title: Cam's Jams
 paginate: 5
-theme: PaperMod
+theme: "PaperMod"
 
 enableRobotsTXT: true
 buildDrafts: false
