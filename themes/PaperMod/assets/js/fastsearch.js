@@ -66,7 +66,6 @@ window.onload = function () {
     }
   };
   xhr.open('GET', '../index.json');
-  //   xhr.open('GET', '../index.json'); asd
   xhr.send();
 };
 

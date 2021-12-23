@@ -10,7 +10,7 @@
 </header>
 
 <div style="margin-top: 40px"></div>
-{{- range $.Site.Data.Projects }}
+{{- range $.Site.Data.projects }}
 <article class="post-entry">
   {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}

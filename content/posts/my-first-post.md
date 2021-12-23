@@ -13,7 +13,7 @@ canonicalURL: https://canonical.url/to/page
 disableHLJS: false
 disableShare: false
 hideSummary: false
-searchHidden: true
+searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
