@@ -1,5 +1,5 @@
 baseURL: "https://cambuchi.github.io/blog"
-title: Cam's Jams
+title: Cam Nguyen | Blog
 paginate: 5
 theme: "PaperMod"
 
@@ -16,12 +16,12 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Cam's Jams
+  title: Cam Nguyen | Blog
   description: "Cam's personal blog."
   keywords: [Blog, Portfolio, Hugo, PaperMod, Forestry, Javascript]
-  author: Cam Nguyen
+  # author: Cam Nguyen
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["catgod.jpg"]
   DateFormat: "January 2, 2006"
   defaultTheme: dark #auto, dark, light
   disableThemeToggle: false
@@ -42,16 +42,16 @@ params:
   assets:
     disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+    safari_pinned_tab: "favicon-32x32.png"
 
   label:
-    text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
+    text: "Cam Nguyen | Blog"
+    # icon: apple-touch-icon.png
+    # iconHeight: 25
 
   # profile-mode
   profileMode:
@@ -70,16 +70,28 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there"
-    Content: Welcome to my blog
+    Title: "Hi, I'm Cam!"
+    Image: >
+      ![Cam Nguyen Headshot](me.jpg#me)
+    Content: 
+      Welcome to my blog. This is a place for me to mostly talk about my
+      developments in coding. I am a first generation immigrant from Vietnam 
+      who is currently trying to become a software developer.  
+
+      
+      -  
+
+
+      - You can reach me at cam.manh.nguyen@gmail.com. 
+      
+      - Let's keep in touch!
 
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
+    - name: linkedin
+      url: "https://github.com/"
     - name: github
       url: "https://github.com/"
+
 
   analytics:
     google:
@@ -115,12 +127,12 @@ menu:
       name: categories
       url: /categories/
       weight: 10
-    - identifier: tags
-      name: tags
+    - identifier: projects
+      name: projects
       url: /tags/
       weight: 20
-    - identifier: example
-      name: example.org
+    - identifier: resume
+      name: resume
       url: https://example.org
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
@@ -133,4 +145,4 @@ markup:
         lineNos: true
         style: vulcan
         # noClasses: true
-        tabWidth: 4
+        tabWidth: 2

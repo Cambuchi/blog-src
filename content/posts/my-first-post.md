@@ -3,7 +3,7 @@ title: My First Post
 date: 2021-12-22T13:53:01.000-08:00
 tags:
 - first
-author: Me
+# author: Me
 showToc: true
 TocOpen: false
 hidemeta: false
@@ -24,7 +24,7 @@ cover:
   relative: false
   hidden: false
 editPost:
-  URL: https://github.com/<path_to_repo>/content
+  URL: https://github.com/Cambuchi/blog-src/blob/main/content
   Text: Suggest Changes
   appendFilePath: true
 
