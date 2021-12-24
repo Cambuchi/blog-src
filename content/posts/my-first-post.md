@@ -211,6 +211,7 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
    > ```bash
    > baseURL: "https://cambuchi.github.io/blog"
    > ```
+   >
    > If you do not do this, then when you turn on GitHub Pages your site will not render correctly.
 6. **Optional:** Create a skeleton post.
    * Go to: [helloworld.md](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1 "helloworld.md")
@@ -361,8 +362,10 @@ With our site set up and ready to go, let's turn on GitHub Pages for our site re
 
 1. On GitHub, go to your site repository.
 2. Click on `Settings`, then `Pages`
-3. Select the main branch in the root directory and click save.
+3. Select the `main` branch in the root directory and click save.
+   * ![](https://cambuchi.github.io/blog/uploads/gh-pages-site-setup.png)
+4. You will need to wait about a minute or so for GitHub Pages to build your site. When your site is ready, this settings page will display a green confirmation box saying that your site is published.
 
 ## Workflow
 
-With everything completed and set up
+With our site published online, let's go through the work flow process.
