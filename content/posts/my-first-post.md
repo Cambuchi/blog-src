@@ -163,3 +163,8 @@ At this point we need to run a few commands to verify that the executable is rea
 
    Complete documentation is available at https://gohugo.io/.
 4. If you see that, success! You have correctly installed Hugo.
+
+```js
+Okay let's test out what this looks like and how it formats
+Two lines just to make sure
+```
