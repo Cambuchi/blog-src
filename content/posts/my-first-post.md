@@ -40,7 +40,7 @@ editPost:
   appendFilePath: true
 
 ---
-# Introduction
+## Introduction
 
 When it comes to building a blog/portfolio site, beginners are often directed to services like WordPress or Squarespace. This is understandable, as these website builders provide a tightly guided creation process. Past this beginner plateau however, the difficulty in creating and hosting a fully customizable site increases dramatically. Some services can alleviate this, but often for a price.
 
@@ -48,7 +48,7 @@ After reading this [thread](https://www.reddit.com/r/webdev/comments/rlsxqk/if_i
 
 This guide aims to create a guided "mid-tier" plateau that those beginning their web development journey can reference to help them move beyond standard website builders. We will build the site with Hugo, apply a site theme, use Forestry.io for our CMS, and host with GitHub Pages.
 
-# Why this stack?
+## Why this stack?
 
 ### 1. Free
 
@@ -88,7 +88,7 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 * At the end of this you will have a site with a commit history for both posts and site edits. This is built into the build and deploy scripts so it's very integrated.
 * Somehow broke your site? Just git checkout back to a working commit.
 
-# Assumptions
+## Assumptions
 
 * This guide is written for Windows 10, but very applicable to Linux/Mac.
   * Git and Git Bash are installed. This is how I use Git and run bash scripts on Windows 10.
@@ -97,7 +97,7 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 
 Let's begin!
 
-# GitHub Setup
+## GitHub Setup
 
 Before we get started, make sure you have a [GitHub](https://github.com "GitHub") account. It's free, easy to set up, and incredibly useful.
 
@@ -111,7 +111,7 @@ Before we get started, make sure you have a [GitHub](https://github.com "GitHub"
        >
        > E.g. your username is **coolperson**, set **Repo #2** to `coolperson.github.io`.
 
-# Hugo Setup
+## Hugo Setup
 
 This will setup Hugo on your system so that you can use it as a command from Git Bash/Terminals. Hugo is a framework for building websites that automates much of the process while still allowing for very deep customization. Commands like `hugo server` will run a local live-server for easy website previewing/tweaking and `hugo` will generate the static files you will serve as your website.
 
@@ -161,11 +161,11 @@ At this point we need to run a few commands to verify that the executable is rea
 4. If you see that, success! You have correctly installed Hugo.
 5. If the installation was not successful, please consult the official Hugo instructions for installing on Windows [here](https://gohugo.io/getting-started/installing/#windows "Hugo Windows Install").
 
-# Build & Theme Site
+## Build & Theme Site
 
 Now for the meat and potatoes. We will build the site with Hugo, attach our theme of choice, rig it all up to GitHub, and deploy to GitHub Pages. Let's go!
 
-#### Create the GitHub build directory.
+### Create the GitHub build directory.
 
 1. On your build repository on GitHub (Repo#1), copy the HTTPS link. It should look something like `https://github.com/<username>/blog-build.git`.
 2. Git Bash into the folder where you want to keep your build directory.
@@ -178,7 +178,7 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
           git clone https://github.com/<username>/blog-build.git
 4. A new empty folder with your repository name should now exist in the directory. E.g. `documents\github\blog-build`.
 
-#### Build the site with Hugo and attach a theme.
+### Build the site with Hugo and attach a theme.
 
 1. In the Git Bash terminal, build your Hugo site into the newly created directory with the following:
 
@@ -218,9 +218,9 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 9. Visit the local host link (in the above case `http://localhost:1313/`) in your web browser and you should see a live preview of how your site currently looks! Ain't she a beauty?  
    ![](https://cambuchi.github.io/blog/uploads/firstlivepreview.png)
 
-# Push to GitHub & Automate
+## Link Site Repo as a Submodule
 
-Next we will link our site repository (**Repo #2**) so that when the site gets built, GitHub pages detects the update and immediately publishes our changes to our domain. We will also write a couple bash scripts to automate updating our build and deploying our site.
+Next we will link our site repository (**Repo #2**) so that when the site gets built, GitHub pages detects the update and immediately publishes our changes to our domain.
 
 1. First we need to remove the `public` directory from the build repository. This is so that we can use it as a submodule for our site repository. Inside the build root directory:
 
@@ -241,3 +241,76 @@ Next we will link our site repository (**Repo #2**) so that when the site gets b
    >
    > As you can see from my example above in the blue text. My branch is `main`.
 3. Great! Now when we run `hugo` our site will be generated into `public`, when `public` gets pushed it heads into our site repository on GitHub, automatically triggering GitHub Pages to update our website.
+
+## Automating
+
+Since changing directories, pulling, adding, committing, and pushing all the time is tedious, we will also write a few bash scripts to automate updating our build and deploying our site.  
+All scripts will be created and saved onto the build's root directory.
+
+1. First we will create a helper function to change directories since terminal cannot execute `cd` when called from a script. See [here](https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script "https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script") for more details.
+   * _path.sh_
+
+     ```js
+     # Filename: path.sh
+     # This file should be sourced
+     
+     function public() {
+     	cd "public"
+     }
+     ```
+2. Next we will create a script that updates our build.
+   * _update.sh_
+
+     ```bash
+     #!/bin/sh
+     # If any part of the script fails the deploy stops.
+     set -e
+     
+     # Status message
+     printf "\033[0;32mUpdating build to GitHub…\033[0m\n" 
+     
+     # Update with any commits the CMS might have added.
+     git pull
+     
+     # Add changes to git. 
+     git add . 
+     
+     # Commit changes. 
+     current="`date +'%Y-%m-%d %H:%M:%S'`"
+     msg="Updated build: $current"
+     git commit -m "$msg"
+     
+     # Push source. 
+     git push origin main
+     ```
+3. Lastly we will create a script that builds our static files and deploys our site.
+   * _deploy.sh_
+
+     ```bash
+     #!/bin/sh
+     # Source the public directory to cd into.
+     source ./path.sh
+     
+     # If any part of the script fails the deploy stops.
+     set -e
+     
+     # Status message.
+     printf "\033[0;32mDeploying updates to GitHub…\033[0m\n" 
+     
+     # Build the project. 
+     hugo
+     
+     # Go to public folder.
+     public
+     
+     # Add changes to git. 
+     git add . 
+     
+     # Commit changes. 
+     current="`date +'%Y-%m-%d %H:%M:%S'`"
+     msg="Deployed site: $current"
+     git commit -m "$msg"
+     
+     # Push source and deploy. 
+     git push origin main
+     ```
