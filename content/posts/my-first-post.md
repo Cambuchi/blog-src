@@ -103,13 +103,14 @@ Before we get started, make sure you have a [GitHub](https://github.com "GitHub"
 
 1. The first step is to create two repositories in GitHub. One for the files you use to generate your website and the other for serving your static website files. Make sure both are public and empty.
    * **Repo #1:** `<your-website-build>`
-     * The above repository will be used for your website build. I recommend something like `blog-build`, `blog-source`, `portfolio-build`, etc.
+     * The above repository will be used for your website's build. I recommend something like `blog-build`, `blog-source`, `portfolio-build`, etc.
    * **Repo #2:** `<your-website>`
      * The above repository will be used to serve your generated web files to the internet. I recommend something like `blog`, `portfolio`, or `<username>.github.io` (special repository name).
 
        > **Note:** If you set **Repo #2** to `blog` your website URL will be `<username>.github.io/blog/`, if instead you want `<username>.github.io` to direct to your site, then use that as the name.
        >
        > E.g. your username is **coolperson**, set **Repo #2** to `coolperson.github.io`.
+2. Throughout this guide I will refer to **Repo #1** as the build folder/directory and **Repo #2** as the site folder/directory.
 
 ## Hugo Setup
 
@@ -368,4 +369,31 @@ With our site set up and ready to go, let's turn on GitHub Pages for our site re
 
 ## Workflow
 
-With our site published online, let's go through the work flow process.
+With our site published online, let's go through the work flow process. The first time we do this there is some setup involved because markdown files require a "front matter template" to let the site generator know what type of document and configuration is being made.
+
+### Initial template creation
+
+1. Navigate to your dashboard on Forestry.io.
+2. Click on your site's repository.
+3. Click on `Posts` on the left.
+4. Click `Create New` at the top.
+   * Since we do not have any post templates, the first time you create a new post you will need to make one.
+   * Create a new template based on existing documents.
+   * ![](https://cambuchi.github.io/blog/uploads/forestry-create-template.png)
+   * Use the `Hello World!` as the template and label it something like "Blog post".
+   * ![](https://cambuchi.github.io/blog/uploads/forestry-add-template.png)
+
+### Regular workflow
+
+1. Create a new post on Forestry, nothing will stop you now.
+2. Click Save on the top right when you are done making your content. This commits your post markdown file into your GitHub repository.
+3. Git Bash into your build directory on your machine.
+4. Run `update.sh` and `deploy.sh`
+```bash
+./update.sh
+```
+
+```bash
+./deploy.sh
+```
+That's it! Your web site should update with the new content in less than a minute.
