@@ -388,7 +388,7 @@ With our site published online, let's go through the work flow process. The firs
 1. Create a new post on Forestry, nothing will stop you now.
 2. Click Save on the top right when you are done making your content. This commits your post markdown file into your GitHub repository.
 3. Git Bash into your build directory on your machine.
-4. Run `update.sh` and `deploy.sh`
+4. Run `update.sh` and then `deploy.sh`
 
 ```bash
 ./update.sh
