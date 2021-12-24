@@ -216,8 +216,7 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
           Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 9. Visit the local host link (in the above case `http://localhost:1313/`) in your web browser and you should see a live preview of how your site currently looks! Ain't she a beauty?
 
-![](https://cambuchi.github.io/blog/uploads/firstlivepreview.png)
-<img style="border: 2px solid rgb(155, 156, 157);" src="https://cambuchi.github.io/blog/uploads/firstlivepreview.png">
+![initial site preview](https://cambuchi.github.io/blog/uploads/firstlivepreview.png)
 
 ## Link Site Repo as a Submodule
 
