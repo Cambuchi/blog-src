@@ -16,8 +16,9 @@ showToc: true
 TocOpen: false
 hidemeta: false
 comments: false
-description: A how-to for building and hosting a free blog with a content management
-  system (CMS) for easy content creation.
+description: How to build and host a free blog with a content management system (CMS)
+  for content creation that doesn't require diving into code or managing markdown
+  files.
 canonicalURL: https://canonical.url/to/page
 disableHLJS: false
 disableShare: false
@@ -29,7 +30,7 @@ ShowPostNavLinks: true
 cover:
   image: uploads/blog-build-banner.jpg
   alt: The blog build tech stack
-  caption: With Hugo, Github Pages, & Forestry we can create a free powerful blog.
+  caption: With Hugo, Github Pages, & Forestry we can create a fully featured site.
   relative: false
   hidden: false
 editPost:
