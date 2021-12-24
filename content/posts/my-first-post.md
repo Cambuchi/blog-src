@@ -39,164 +39,19 @@ editPost:
   appendFilePath: true
 
 ---
-Some text above
+# Introduction
 
-```js
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
+When it comes to building a blog/portfolio site, beginners are often directed to services like Wordpress or Squarespace. This is understandable, as these closed systems guide you through the entire creation process. Past this beginner plateau however, the difficulty in creating a fully customizable site with all the bells and whistles increases dramatically.
 
-package main
+After reading this [thread](https://www.reddit.com/r/webdev/comments/rlsxqk/if_i_was_going_to_create_my_own_blog_website_what/) on reddit I realized that even for people with web development experience, the lack of easily available instructions have many defaulting back to this beginner step as well. If you think more advanced web-content creation involves diving into code or crafting HTML for every post, then the editors on website building services would indeed seem very appealing. However I am here to tell you that this is not the case, and that similar tools and easy to use workflows are available for custom built sites as well.
 
-import "fmt"
+This guide aims to create a guided "mid-tier" plateau that those beginning their web development journey can reference to help them move beyond standard website builders.
 
-func main() {
-  fmt.Println("Hello, World!")
-}
-```
+# Why?
 
-Some text below
+1. Free
+   * From beginning to end, this entire process is free. This blog you are looking at right now was made with these steps and did not cost me a single cent.
 
-```js
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
 
-package main
-
-import "fmt"
-
-func main() {
-  fmt.Println("Hello, World!")
-}
-```
-
-Another one
-
-```js
-const Person = (name, age) => {
-  const sayName = () => console.log(name)
-}
-let Cam = Person('Cam', '30');
-```
-
-And we will see what the default code input is below:
-
-    const Person = (name, age) => {
-      const sayName = () => console.log(name)
-    }
-    let Cam = Person('Cam', '30');
-
-how about `inline` code?
-
-lastly let's check if the hugo method works
-
-{{< highlight html >}}
-`<section id="main"> <div> <h1 id="title">{{ .Title }}</h1> {{ range .Pages }} {{ .Render "summary"}} {{ end }} </div> </section>`
-{{< /highlight >}}
-
-follow up with some JS
-
-{{< highlight js >}}
-
-const Person = (name, age) => {
-
-    const sayName = () => console.log(name) } 
-
-let Cam = Person('Cam', '30');
-
-{{< /highlight >}}
-
-{{< highlight js >}}
-
-const primes = num => {
-let arr = Array.from({ length: num - 1 }).map((x, i) => i + 2),
-sqroot = Math.floor(Math.sqrt(num)),
-numsTillSqroot = Array.from({ length: sqroot - 1 }).map((x, i) => i + 2);
-numsTillSqroot.forEach(x => (arr = arr.filter(y => y % x !== 0 || y === x)));
-return arr;
-};
-
-{{< /highlight >}}
-
-{{< highlight js >}}
-
-// when trash icon is clicked, display modal and change onclick functionality to match
-// target element actions
-const clickTrashIcon = (data, element) => {
-// display confirmation modal
-const modal = document.getElementById('modal-confirm');
-modal.style.display = 'flex';
-// remove previous onclick functions
-const confirm = document.getElementById('modal-confirm-submit');
-confirm.onclick = null;
-// onclick logic for when group trash items are clicked
-if (element.classList.contains('group-item')) {
-confirm.onclick = function deleteGroup() {
-DOM.clickGroupTrash(element);
-Logic.deleteGroup(data, element.textContent);
-DataStorage.setLocalStorage('todolist', data);
-modal.style.display = 'none';
-};
-// onclick logic for when tasks are being trashed
-} else if (element.classList.contains('task')) {
-confirm.onclick = function deleteTask() {
-const currentGroup = document.getElementById('main-header-title').textContent;
-Logic.deleteTask(data\[currentGroup\], element.id);
-Logic.renumberTasks(data\[currentGroup\].tasks);
-DOM.populateTasks(data, currentGroup);
-DataStorage.setLocalStorage('todolist', data);
-modal.style.display = 'none';
-};
-}
-};
-
-{{< /highlight >}}
-
-Last but not least let's see how this works in practice.
-
-{{< highlight js >}}
-//play a move (move is an index on the board)
-play(move) {
-//if board index is not empty (0) or game is in win condition, invalid move
-if (this.board\[move\] !== 0 || this.isWin) {
-return false;
-}
-//plays a 1 or 2 on the board (representing X or O)
-this.board\[move\] = this.turn;
-this.moves.push(move);
-//checks the board and updates the game state if needed
-// Use regular expression to detect any 3-in-a-row
-this.isWin = /^(?:...)*(\[12\])\\1\\1|^.?.?(\[12\])..\\2..\\2|^(\[12\])...\\3...\\3|^..(\[12\]).\\4.\\4/.test(this.board.join(""));
-this.isDraw = !this.isWin && this.moves.length === this.board.length;
-return true;
-}
-{{< /highlight >}}
-
-Did that work?
-
-Final test...? maybe.
-
-```js
-//play a move (move is an index on the board)
-play(move) {
-    //if board index is not empty (0) or game is in win condition, invalid move
-    if (this.board[move] !== 0 || this.isWin) {
-        return false;
-     }
-     //plays a 1 or 2 on the board (representing X or O)
-    this.board[move] = this.turn;
-    this.moves.push(move);
-    //checks the board and updates the game state if needed
-    // Use regular expression to detect any 3-in-a-row
-    this.isWin = /^(?:...)*([12])\1\1|^.?.?([12])..\2..\2|^([12])...\3...\3|^..([12]).\4.\4/.test(this.board.join(""));
-    this.isDraw = !this.isWin && this.moves.length === this.board.length;
-    return true;
-}
-```
-
-Complete?
+   * If you want your own custom domain then you would have to pay for that, but GitHub Pages is already set up to fully support custom domains.
+2. Workflow
