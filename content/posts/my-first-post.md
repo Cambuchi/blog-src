@@ -27,7 +27,7 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-  image: static/uploads/blog-build-banner.jpg
+  image: uploads/blog-build-banner.jpg
   alt: The blog build tech stack
   caption: With Hugo, Github Pages, & Forestry we can create a free powerful blog.
   relative: false
