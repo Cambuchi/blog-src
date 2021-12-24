@@ -52,7 +52,6 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 1. **Free**
    * From beginning to end, this entire process is free. This blog you are looking at right now was made for free and does not cost anything to host.
    * If you want your own custom domain then you would have to pay for that, but GitHub Pages is already set up to fully support custom domains.
-
 2. **Easy content creation with a CMS**
    * Making content is just as easy as website builders. You get a fully functional text/markdown editor that automatically commits to your sites repository.
    * No need to open code or edit HTML just to make a new post.
@@ -68,13 +67,10 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
      3. Add, commit, and push changes to your repository
    * GitHub Pages detects that you made changes and automatically updates your site within minutes.
    * After creating the content, it takes me less than 30 seconds to update my site with the new post.
-
 4. **Easy to set-up**
    * Hugo and Hugo Themes do all of the heavy lifting for generating your website.
    * No need to build all the logic and HTML for tags. categories, search functionality, syntax highlighting, etc. Generating a site and getting it online can be done in less than an hour.
-
 5. **Customization**
    * Since everything is HTML and JavaScript, changing the site layout and little details is completely under your control. No more default footers advertising WordPress or Squarespace on your site.
    * Toggle or button not where you want it? Moving elements around and custom CSS is easily done in the Hugo framework.
 
-Test
