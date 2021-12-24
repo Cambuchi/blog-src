@@ -83,7 +83,7 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 * Since everything is HTML and JavaScript, changing the site layout and little details is completely under your control. No more default footers advertising WordPress or Squarespace on your site.
 * Toggle or button not where you want it? Moving elements around and custom CSS is easily done in the Hugo framework.
 
-### 6. Git and GitHub
+### 6. Git and GitHub Integration
 
 * At the end of this you will have a site with a commit history for both posts and site edits. This is built into the build and deploy scripts so it's very integrated.
 * Somehow broke your site? Just git checkout back to a working commit.
@@ -104,8 +104,6 @@ Before we get started, make sure you have a [GitHub](https://github.com "GitHub"
 1. The first step is to create two repositories in GitHub. One for the files you use to generate your website and the other for serving your static website files. Make sure both are public and empty.
    * **Repo #1:** `<your-website-build>`
      * The above repository will be used for your website build. I recommend something like `blog-build`, `blog-source`, `portfolio-build`, etc.
-
-
    * **Repo #2:** `<your-website>`
      * The above repository will be used to serve your generated web files to the internet. I recommend something like `blog`, `portfolio`, or `<username>.github.io` (special repository name).
 
@@ -188,7 +186,7 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
    * You should see a message in the terminal congratulating you.
 
    > **Note:** feel free to omit `-f yml` if you want to use the default `toml` files for your configurations. I am more familiar with `yaml/yml` files and find them easier to read but they are both quite similar.
-2. Our theme in this example we be [PaperMod](https://github.com/adityatelange/hugo-PaperMod "PaperMod Theme"). Feel free to browse the many themes at [https://themes.gohugo.io/](https://themes.gohugo.io/ "https://themes.gohugo.io/") for other options.
+2. Next is theming, our theme in this example will be [PaperMod](https://github.com/adityatelange/hugo-PaperMod "PaperMod Theme"). Feel free to browse the many themes at [https://themes.gohugo.io/](https://themes.gohugo.io/ "https://themes.gohugo.io/") for other options.
 3. In the terminal, go into the build directory.
 
           cd <folder-name>
@@ -200,4 +198,45 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
    > **Note:** to update the theme, go into the PaperMod theme folder and git pull.
    >
    > E.g. `cd themes/PaperMod` followed by `git pull`.
-5. Create a config file.
+
+   > The next couple steps are optional but will better flesh out your site on the first build and help you understand what's going on.
+5. **Optional:** Populate your config file.
+   * Go to: [https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml "https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml")
+   * Download and replace your `config.yml` file with the file above or open your `config.yml` file and replace the contents.
+   * Your config file should be in the root of your build folder.
+6. **Optional:** Create a skeleton post.
+   * Go to: [https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1 "https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1")
+   * Download the `helloworld.md` file and place it into `content\posts\` in the root of your build folder. E.g. `blog-build\content\posts\helloworld.md`.
+7. Build your site and see it on the local live server!
+   * With terminal pointed at your build's root directory, run:
+
+          hugo server
+8. You should see a message in the terminal with a line that says
+
+          Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+9. Visit the local host link (in the above case `http://localhost:1313/`) in your web browser and you should see a live preview of how your site currently looks! Ain't she a beauty?  
+   ![](https://cambuchi.github.io/blog/uploads/firstlivepreview.png)
+
+# Push to GitHub & Automate
+
+Next we will link our site repository (**Repo #2**) so that when the site gets built, GitHub pages detects the update and immediately publishes our changes to our domain. We will also write a couple bash scripts to automate updating our build and deploying our site.
+
+1. First we need to remove the `public` directory from the build repository. This is so that we can use it as a submodule for our site repository. Inside the build root directory:
+
+          rm -rf public
+2. On your site repository on GitHub, copy the HTTPS link. It should look something like `https://github.com/<username>/blog.git`. With that we can add our site directory as a submodule:
+
+          git submodule add -b main
+          <HTTPS-repository-link> public
+
+   As an actual example:
+
+          git submodule add -b main
+          https://github.com/coolperson/blog.git public
+
+   > **Note:** depending on your Git/GitHub settings, `main` might have to be replaced with `master`. You can easily determine which to use with Git Bash. When pointed at a root folder, there will be parentheses after the file path telling you which branch you are on.
+   >
+   > ![](https://cambuchi.github.io/blog/uploads/bashbranch.png)
+   >
+   > As you can see from my example above in the blue text. My branch is `main`.
+3. Great! Now when we run `hugo` our site will be generated into `public`, when `public` gets pushed it heads into our site repository on GitHub, automatically triggering GitHub Pages to update our website.
