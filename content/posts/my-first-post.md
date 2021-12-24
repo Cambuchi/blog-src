@@ -250,7 +250,7 @@ All scripts will be created and saved onto the build's root directory.
 1. First we will create a helper function to change directories since terminal cannot execute `cd` when called from a script. See [here](https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script "https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script") for more details.
    * _path.sh_
 
-     ```js
+     ```bash
      # Filename: path.sh
      # This file should be sourced
      
