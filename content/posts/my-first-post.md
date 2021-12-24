@@ -1,14 +1,23 @@
 ---
-title: My First Post
+title: 'Build a blog with CMS & Git functionality '
 date: 2021-12-22T13:53:01.000-08:00
 tags:
-- first
-# author: Me
+- Blog
+- CMS
+- Git
+- Hugo
+- Forestry.io
+- GitHub
+- Web Development
+- Hosting
+- Development
+- Free
 showToc: true
 TocOpen: false
 hidemeta: false
 comments: false
-description: Desc Text.
+description: A how-to for building and hosting a free blog with a content management
+  system (CMS) for easy content creation.
 canonicalURL: https://canonical.url/to/page
 disableHLJS: false
 disableShare: false
@@ -18,9 +27,9 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-  image: https://www.theodinproject.com/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg
-  alt: test alt
-  caption: test caption
+  image: "/uploads/blog-build-banner.jpg"
+  alt: The blog build tech stack
+  caption: With Hugo, Github Pages, & Forestry we can create a free powerful blog.
   relative: false
   hidden: false
 editPost:
