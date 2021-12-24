@@ -55,7 +55,7 @@ code {
   font-family: 'JetBrains Mono', monospace;
 }
 
-code:nth-child(1) > span:nth-child(1) {
+code > span:nth-child(1) {
   margin: 0px !important;
 }
 

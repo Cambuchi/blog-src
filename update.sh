@@ -8,6 +8,9 @@ printf "\033[0;32mUpdating build to GitHub…\033[0m\n"
 # Update with any commits the CMS might have added.
 git pull
 
+# Build the project. 
+hugo
+
 # Add changes to git. 
 git add . 
 
