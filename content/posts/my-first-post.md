@@ -202,11 +202,11 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 
    > The next couple steps are optional but will better flesh out your site on the first build and help you understand what's going on.
 5. **Optional:** Populate your config file.
-   * Go to: [provided config.yml](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml "config.yml")
+   * Go to: [config.yml](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml "config.yml")
    * Download and replace your `config.yml` file with the file above or open your `config.yml` file and replace the contents.
    * Your config file should be in the root of your build folder.
 6. **Optional:** Create a skeleton post.
-   * Go to: [provided helloworld.md](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1 "helloworld.md")
+   * Go to: [helloworld.md](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1 "helloworld.md")
    * Download the `helloworld.md` file and place it into `content\posts\` in the root of your build folder. E.g. `blog-build\content\posts\helloworld.md`.
 7. Build your site and see it on the local live server! With terminal pointed at your build's root directory, run:
 
