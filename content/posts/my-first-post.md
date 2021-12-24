@@ -91,7 +91,7 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 # Assumptions
 
 * This guide is written for Windows 10, but very applicable to Linux/Mac.
-  * You have Git and Git Bash installed. This is how I use Git and run bash scripts on Windows 10.
+  * Git and Git Bash are installed. This is how I use Git and run bash scripts on Windows 10.
 * Visual Studio Code was used to edit and create all of the files necessary.
 * For customizing: you have some understanding of how HTML/CSS/Javascript work. You can manipulate the DOM and find out classes/selectors for elements from the console.
 
@@ -101,7 +101,7 @@ Let's begin!
 
 Before we get started, make sure you have a [GitHub](https://github.com "GitHub") account. It's free, easy to set up, and incredibly useful.
 
-1. The first step is to create two repositories in GitHub. One for the files you use to generate your website and the other for serving your static website files.
+1. The first step is to create two repositories in GitHub. One for the files you use to generate your website and the other for serving your static website files. Make sure both are public and empty.
 
    **Repo #1:** `<your-website-build>`
 
@@ -111,7 +111,7 @@ Before we get started, make sure you have a [GitHub](https://github.com "GitHub"
 
    > The above repository will be used to serve your generated web files to the internet. I recommend something like `blog`, `portfolio`, or `<username>.github.io` (special repository name).
    >
-   > Note:
+   > **Note:**
    > * If you set **Repo #2** to `blog` your website URL will be `<username>.github.io/blog/`, if instead you want `<username>.github.io` to direct to your site, then use that as the name.
    > * E.g. your username is **coolperson**, set **Repo #2** to `coolperson.github.io`.
 
@@ -119,13 +119,13 @@ Before we get started, make sure you have a [GitHub](https://github.com "GitHub"
 
 This will setup Hugo on your system so that you can use it as a command from Git Bash/Terminals. Hugo is a framework for building websites that automates much of the process while still allowing for very deep customization. Commands like `hugo server` will run a local live-server for easy website previewing/tweaking and `hugo build` will generate the static files you will serve as your website.
 
-The following instructions are specific for Windows 10. Mac/Linux users can find installation instructions here: [https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/ "https://gohugo.io/getting-started/installing/")
+The following instructions are specific for Windows 10. Mac and Linux users can find installation instructions [here](https://gohugo.io/getting-started/installing/ "Hugo Installation Instructions").
 
 ### Setup
 
 1. Create a new folder `C:\Hugo`.
 2. Create a subfolder in the Hugo folder `C:\Hugo\bin`.
-3. Download the latest zipped Hugo executable from [Hugo Releases](https://github.com/gohugoio/hugo/releases "https://github.com/gohugoio/hugo/releases").
+3. Download the latest zipped Hugo executable for your system from [Hugo Releases](https://github.com/gohugoio/hugo/releases "https://github.com/gohugoio/hugo/releases").
    * For me this was `hugo_0.91.2_Windows-64bit.zip`.
 4. Extract all contents to your `C:\Hugo\bin` folder.
    * Your directory should look like the following:
@@ -133,8 +133,8 @@ The following instructions are specific for Windows 10. Mac/Linux users can find
           C:
           └───Hugo
               └───bin
-                  └───hugo.exe
-                  └───LICENSE
+                  ├───hugo.exe
+                  ├───LICENSE
                   └───README.md
 5. Add the `C:\Hugo\bin` folder to Windows PATH settings.
    1. Hit the `Windows + R` key combination or from the start menu type `run` and hit `enter`.
@@ -160,11 +160,46 @@ At this point we need to run a few commands to verify that the executable is rea
           
           Hugo is a Fast and Flexible Static Site Generator
           built with love by spf13 and friends in Go.
-
-   Complete documentation is available at https://gohugo.io/.
+       
+          Complete documentation is available at https://gohugo.io/.
 4. If you see that, success! You have correctly installed Hugo.
+5. If the installation was not successful, please consult the official Hugo instructions for installing on Windows [here](https://gohugo.io/getting-started/installing/#windows "Hugo Windows Install").
 
-```js
-Okay let's test out what this looks like and how it formats
-Two lines just to make sure
-```
+# Build & Theme Site
+
+Now for the meat and potatoes. We will build the site with Hugo, attach our theme of choice, rig it all up to GitHub, and deploy to GitHub Pages. Let's go!
+
+#### Create the GitHub build directory.
+
+1. On your build repository on GitHub (Repo#1), copy the HTTPS link. It should look something like `https://github.com/<username>/blog-build.git`.
+2. Git Bash into the folder where you want to keep your build directory.
+
+          cd documents/github
+   * Pay special attention to the slashes! Windows file paths with `\` will not work in Unix based utilities.
+3. Clone your build repository:
+
+          git clone https://github.com/<username>/blog-build.git
+4. A new empty folder with your repository name should now exist in the directory. E.g. `documents\github\blog-build`.
+
+#### Build the site with Hugo and attach a theme.
+
+1. In the Git Bash terminal, build your Hugo site into the newly created directory with the following:
+
+          hugo new site <folder-name> -f yml --force
+   * E.g. `hugo new site blog-build -f yml --force`.
+   * You should see a message in the terminal congratulating you.
+
+   > **Note:** feel free to omit `-f yml` if you want to use the default `toml` files for your configurations. I am more familiar with `yaml/yml` files and find them easier to read but they are both quite similar.
+2. Our theme in this example we be [PaperMod](https://github.com/adityatelange/hugo-PaperMod "PaperMod Theme"). Feel free to browse the many themes at [https://themes.gohugo.io/](https://themes.gohugo.io/ "https://themes.gohugo.io/") for other options.
+3. In the terminal, go into the build directory.
+
+          cd <folder-name>
+   * E.g. `cd blog-build`
+4. Now that we're inside our Hugo site folder, run:
+
+          git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
+
+   > **Note:** to update the theme, go into the PaperMod theme folder and git pull.
+   >
+   > E.g. `cd themes/PaperMod` followed by `git pull`.
+5. h
