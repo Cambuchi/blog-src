@@ -1,14 +1,17 @@
 #!/bin/sh
-# Source the public directory to cd into
+# Source the public directory to cd into.
 source ./path.sh
 
-# If any part of the script fails the deploy stops
+# If any part of the script fails the deploy stops.
 set -e
 
-# Status message
+# Status message.
 printf "\033[0;32mDeploying updates to GitHub…\033[0m\n" 
 
-# Go To Public folder 
+# Build the project. 
+hugo
+
+# Go to public folder.
 public
 
 # Add changes to git. 
