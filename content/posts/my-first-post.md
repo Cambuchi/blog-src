@@ -12,6 +12,7 @@ tags:
 - Hosting
 - Development
 - Free
+- Tutorial
 showToc: true
 TocOpen: false
 hidemeta: false
@@ -45,26 +46,26 @@ When it comes to building a blog/portfolio site, beginners are often directed to
 
 After reading this [thread](https://www.reddit.com/r/webdev/comments/rlsxqk/if_i_was_going_to_create_my_own_blog_website_what/) on reddit I realized that even for people with web development experience, the lack of easily available instructions have many defaulting back to this beginner step as well. If you think more advanced web-content creation involves diving into code or crafting HTML for every post, then the editors on website building services would indeed seem very appealing. However I am here to tell you that this is not the case, and that similar tools and easy to use workflows are available for custom built sites as well.
 
-This guide aims to create a guided "mid-tier" plateau that those beginning their web development journey can reference to help them move beyond standard website builders.
+This guide aims to create a guided "mid-tier" plateau that those beginning their web development journey can reference to help them move beyond standard website builders. We will build the site with Hugo, apply a site theme, use Forestry.io for our CMS, and host with GitHub Pages.
 
-# Why?
+# Why this stack?
 
 ### 1. Free
 
 * From beginning to end, this entire process is free. This blog you are looking at right now was made for free and does not cost anything to host.
-* GitHub Pages is already set up to fully support paid custom domains if you want a different URL for your blog.
+* GitHub Pages is already set up to easily support paid custom domains if you want a different URL for your blog.
 
 ### 2. Easy content creation with a CMS
 
-* Making content is just as easy as website builders. You get a fully functional text/markdown editor that automatically commits to your sites repository.
+* Making content is just as easy as website builders. You get a fully functional online text/markdown editor that automatically commits to your sites repository.
 * No need to open code or edit HTML just to make a new post.
-* Here is an example of me making a new post for my blog:
+* Here is an example of me making a new post for my blog on Forestry:
 
 ![making a new post in forestry](https://cambuchi.github.io/blog/uploads/buildsite.gif "making a new post in forestry")
 
 ### 3. Easy to use/workflow
 
-* Create content on forestry (this commits to your repository)
+* Create content on Forestry (this commits to your repository)
 * Run a script that does the following
   1. Pull update from repository into your build directory
   2. Build site using Hugo
@@ -86,3 +87,55 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 
 * At the end of this you will have a site with a commit history for both posts and site editing. This is built into the build and deploy scripts so it's very integrated.
 * Somehow broke your site? Just git checkout back to a working commit.
+
+# Assumptions
+
+* This guide is written for Windows 10, but very applicable to Linux/Mac.
+  * You have Git and Git Bash installed. This is how I use Git and run bash scripts on Windows 10.
+* Visual Studio Code was used to edit and create all of the files necessary.
+* For customizing: you have some understanding of how HTML/CSS/Javascript work. You can manipulate the DOM and find out classes/selectors for elements from the console.
+
+Let's begin!
+
+# GitHub Setup
+
+Before we get started, make sure you have a GitHub account. It's free, easy to set up, and incredibly useful.
+
+1. The first step is to create two repositories in GitHub. One for the files you use to generate your website and the other for serving your static website files.
+
+   **Repo #1:** `<your-website-build>`
+
+   > The above repository will be used for your website build. I recommend something like `blog-build`, `blog-source`, `portfolio-build`, etc.
+
+   **Repo #2:** `<your-website>`
+
+   > The above repository will be used to serve your generated web files to the internet. I recommend something like `blog`, `portfolio`, or `<username>.github.io` (special repository name).
+   >
+   > Note:
+   > * If you set **Repo #2** to `blog` your website URL will be `<username>.github.io/blog/`, if instead you want `<username>.github.io` to direct to your site, then use that as the name.
+   > * E.g. your username is _coolperson_, set **Repo #2** to _`coolperson`_`.github.io`.
+
+# Hugo Setup
+
+This will setup Hugo on your system so that you can use it as a command from Git Bash. Hugo is a framework for building websites that automates much of the process while still allowing for very deep customization. Commands like `hugo server` will run a local live-server for easy website previewing/tweaking and `hugo build` will generate the static files you will serve as your website.
+
+The following instructions are specific for Windows 10. Mac/Linux users can find installation instructions here: [https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/ "https://gohugo.io/getting-started/installing/")
+
+1. Create a new folder `C:\Hugo`.
+2. Create a subfolder in the Hugo folder `C:\Hugo\bin`.
+3. Download the latest zipped Hugo executable from [Hugo Releases](https://github.com/gohugoio/hugo/releases "https://github.com/gohugoio/hugo/releases").
+   * For me this was `hugo_0.91.2_Windows-64bit.zip`.
+4. Extract all contents to your `C:\Hugo\bin` folder.
+   * Your directory should look like the following:
+
+          C:
+          └───Hugo
+              └───bin
+                  └───hugo.exe
+                  └───LICENSE
+                  └───README.md
+5. Add the `C:\Hugo\bin` folder to Windows PATH settings.
+   1. Hit the `Windows + R` key combination or from the start menu type `run` and hit `enter`.
+   2. In the run application, type `SystemPropertiesAdvanced` and hit `enter`.  
+      ![Run Application](https://cambuchi.github.io/blog/uploads/run.png)
+   3.
