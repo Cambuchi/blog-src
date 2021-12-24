@@ -217,7 +217,7 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 6. **Optional:** Create a skeleton post.
    * Go to: [helloworld.md](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1 "helloworld.md")
    * Download the `helloworld.md` file and place it into `content\posts\` in the root of your build folder. E.g. `blog-build\content\posts\helloworld.md`.
-7. Build your site and see it on the local live server! With terminal pointed at your build's root directory, run:
+7. Let's leverage one of Hugo's tools and preview our site on a local live server! With terminal pointed at your build's root directory, run:
 
         hugo server
 8. You should see a message in the terminal with a line that says
