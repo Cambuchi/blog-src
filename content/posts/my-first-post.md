@@ -42,7 +42,7 @@ editPost:
 ---
 # Introduction
 
-When it comes to building a blog/portfolio site, beginners are often directed to services like WordPress or Squarespace. This is understandable, as these closed systems guide you through the entire creation process. Past this beginner plateau however, the difficulty in creating a fully customizable site with all the bells and whistles increases dramatically.
+When it comes to building a blog/portfolio site, beginners are often directed to services like WordPress or Squarespace. This is understandable, as these website builders provide a tightly guided creation process. Past this beginner plateau however, the difficulty in creating and hosting a fully customizable site increases dramatically. Some services can alleviate this, but often for a price.
 
 After reading this [thread](https://www.reddit.com/r/webdev/comments/rlsxqk/if_i_was_going_to_create_my_own_blog_website_what/) on reddit I realized that even for people with web development experience, the lack of easily available instructions have many defaulting back to this beginner step as well. If you think more advanced web-content creation involves diving into code or crafting HTML for every post, then the editors on website building services would indeed seem very appealing. However I am here to tell you that this is not the case, and that similar tools and easy to use workflows are available for custom built sites as well.
 
@@ -85,7 +85,7 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 
 ### 6. Git and GitHub
 
-* At the end of this you will have a site with a commit history for both posts and site editing. This is built into the build and deploy scripts so it's very integrated.
+* At the end of this you will have a site with a commit history for both posts and site edits. This is built into the build and deploy scripts so it's very integrated.
 * Somehow broke your site? Just git checkout back to a working commit.
 
 # Assumptions
@@ -102,22 +102,20 @@ Let's begin!
 Before we get started, make sure you have a [GitHub](https://github.com "GitHub") account. It's free, easy to set up, and incredibly useful.
 
 1. The first step is to create two repositories in GitHub. One for the files you use to generate your website and the other for serving your static website files. Make sure both are public and empty.
+   * **Repo #1:** `<your-website-build>`
+     * The above repository will be used for your website build. I recommend something like `blog-build`, `blog-source`, `portfolio-build`, etc.
 
-   **Repo #1:** `<your-website-build>`
 
-   > The above repository will be used for your website build. I recommend something like `blog-build`, `blog-source`, `portfolio-build`, etc.
+   * **Repo #2:** `<your-website>`
+     * The above repository will be used to serve your generated web files to the internet. I recommend something like `blog`, `portfolio`, or `<username>.github.io` (special repository name).
 
-   **Repo #2:** `<your-website>`
-
-   > The above repository will be used to serve your generated web files to the internet. I recommend something like `blog`, `portfolio`, or `<username>.github.io` (special repository name).
-   >
-   > **Note:**
-   > * If you set **Repo #2** to `blog` your website URL will be `<username>.github.io/blog/`, if instead you want `<username>.github.io` to direct to your site, then use that as the name.
-   > * E.g. your username is **coolperson**, set **Repo #2** to `coolperson.github.io`.
+       > **Note:** If you set **Repo #2** to `blog` your website URL will be `<username>.github.io/blog/`, if instead you want `<username>.github.io` to direct to your site, then use that as the name.
+       >
+       > E.g. your username is **coolperson**, set **Repo #2** to `coolperson.github.io`.
 
 # Hugo Setup
 
-This will setup Hugo on your system so that you can use it as a command from Git Bash/Terminals. Hugo is a framework for building websites that automates much of the process while still allowing for very deep customization. Commands like `hugo server` will run a local live-server for easy website previewing/tweaking and `hugo build` will generate the static files you will serve as your website.
+This will setup Hugo on your system so that you can use it as a command from Git Bash/Terminals. Hugo is a framework for building websites that automates much of the process while still allowing for very deep customization. Commands like `hugo server` will run a local live-server for easy website previewing/tweaking and `hugo` will generate the static files you will serve as your website.
 
 The following instructions are specific for Windows 10. Mac and Linux users can find installation instructions [here](https://gohugo.io/getting-started/installing/ "Hugo Installation Instructions").
 
@@ -202,4 +200,4 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
    > **Note:** to update the theme, go into the PaperMod theme folder and git pull.
    >
    > E.g. `cd themes/PaperMod` followed by `git pull`.
-5. h
+5. Create a config file.
