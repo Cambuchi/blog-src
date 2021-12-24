@@ -99,7 +99,7 @@ Let's begin!
 
 # GitHub Setup
 
-Before we get started, make sure you have a GitHub account. It's free, easy to set up, and incredibly useful.
+Before we get started, make sure you have a [GitHub](https://github.com "GitHub") account. It's free, easy to set up, and incredibly useful.
 
 1. The first step is to create two repositories in GitHub. One for the files you use to generate your website and the other for serving your static website files.
 
@@ -117,9 +117,11 @@ Before we get started, make sure you have a GitHub account. It's free, easy to s
 
 # Hugo Setup
 
-This will setup Hugo on your system so that you can use it as a command from Git Bash. Hugo is a framework for building websites that automates much of the process while still allowing for very deep customization. Commands like `hugo server` will run a local live-server for easy website previewing/tweaking and `hugo build` will generate the static files you will serve as your website.
+This will setup Hugo on your system so that you can use it as a command from Git Bash/Terminals. Hugo is a framework for building websites that automates much of the process while still allowing for very deep customization. Commands like `hugo server` will run a local live-server for easy website previewing/tweaking and `hugo build` will generate the static files you will serve as your website.
 
 The following instructions are specific for Windows 10. Mac/Linux users can find installation instructions here: [https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/ "https://gohugo.io/getting-started/installing/")
+
+### Setup
 
 1. Create a new folder `C:\Hugo`.
 2. Create a subfolder in the Hugo folder `C:\Hugo\bin`.
@@ -138,4 +140,28 @@ The following instructions are specific for Windows 10. Mac/Linux users can find
    1. Hit the `Windows + R` key combination or from the start menu type `run` and hit `enter`.
    2. In the run application, type `SystemPropertiesAdvanced` and hit `enter`.  
       ![Run Application](https://cambuchi.github.io/blog/uploads/run.png)
-   3.
+   3. Click on `Environment Variables...` on the bottom right.
+      ![System Properties](https://cambuchi.github.io/blog/uploads/system-properties.png)
+   4. Under `User variables` double click on `PATH` (might be `Path`).
+      * If you are an admin and they only user of your computer feel free to add to the `PATH` under `System variables`.
+   5. Click on `New`.
+   6. Type `C:\Hugo\bin` hit `enter` and then click `OK`.
+   7. Click `OK` on the Environment Variables window, and then `OK` on the System Properties window.
+
+### Verify
+
+At this point we need to run a few commands to verify that the executable is ready to use. To ensure that the PATH environment variables have propagated, it's best to restart your computer. At the very least, make sure Git Bash and any Terminal apps are fully closed.
+
+1. Open Git Bash.
+2. Type `hugo help` and hit enter.
+3. You should see output that starts with:
+
+   ```{linenos=false}
+   hugo is the main command, used to build your Hugo site.
+   
+   Hugo is a Fast and Flexible Static Site Generator
+   built with love by spf13 and friends in Go.
+   
+   Complete documentation is available at https://gohugo.io/.
+   ```
+4. If you see that, success! You have correctly installed Hugo.
