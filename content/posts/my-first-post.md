@@ -200,11 +200,18 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
    >
    > E.g. `cd themes/PaperMod` followed by `git pull`.
 
-   > The next couple steps are optional but will better flesh out your site on the first build and help you understand what's going on.
+   > The next couple steps are optional but will better flesh out your site on the first build and help you understand what's going on. I highly recommend you do them.
 5. **Optional:** Populate your config file.
    * Go to: [config.yml](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml "config.yml")
    * Download and replace your `config.yml` file with the file above or open your `config.yml` file and replace the contents.
    * Your config file should be in the root of your build folder.
+
+   > **Important:** on line 1 of `config.yml`, change `baseURL: "https://examplesite.com/"` from the example site to the link that your own site will occupy. An example:
+   >
+   > ```bash
+   > baseURL: "https://cambuchi.github.io/blog"
+   > ```
+   > If you do not do this, then when you turn on GitHub Pages your site will not render correctly.
 6. **Optional:** Create a skeleton post.
    * Go to: [helloworld.md](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1 "helloworld.md")
    * Download the `helloworld.md` file and place it into `content\posts\` in the root of your build folder. E.g. `blog-build\content\posts\helloworld.md`.
@@ -227,13 +234,11 @@ Next we will link our site repository (**Repo #2**) so that when the site gets b
         rm -rf public
 2. On your site repository on GitHub, copy the HTTPS link. It should look something like `https://github.com/<username>/blog.git`. With that we can add our site directory as a submodule:
 
-        git submodule add -b main
-        <HTTPS-repository-link> public
+        git submodule add -b main <HTTPS-repository-link> public
 
    As an actual example:
 
-        git submodule add -b main
-        https://github.com/coolperson/blog.git public
+        git submodule add -b main https://github.com/coolperson/blog.git public
 
    > **Note:** depending on your Git/GitHub settings, `main` might have to be replaced with `master`. You can easily determine which to use with Git Bash. When pointed at a root folder, there will be parentheses after the file path telling you which branch you are on.
    >
@@ -244,11 +249,9 @@ Next we will link our site repository (**Repo #2**) so that when the site gets b
 
 Let's populate our GitHub's build repository so that we have a branch for our CMS to hook onto. This first commit will be the only time that we do this manually. Enter the following while the Terminal is pointed at the build's root folder.
 
-
         git add .
         git commit -m "First commit"
         git push origin main
-
 
 ## Forestry.io Setup (CMS)
 
@@ -261,7 +264,7 @@ Now that our site is built and rigged up to GitHub, let's add in a CMS so that c
 3. Choose GitHub as the Git provider.
    * ![forestry-pick-github](https://cambuchi.github.io/blog/uploads/forestry-pick-github.png)
 4. A browser window (not pictured) should then pop up asking for your credentials in order to authenticate.
-5. After authentication simply select the your **build** repository (Repo #1), not your site repository. Pick the `main` branch of your repository.
+5. After authentication simply select the your **build** repository (**Repo #1**), not your site repository. Pick the `main` branch of your repository.
    * ![forestry-pick-repo](https://cambuchi.github.io/blog/uploads/forestry-pick-repo.png)
 
    > Forestry should detect your config file and display `Config file found!`. If not, then make sure Hugo is properly set up.
@@ -342,6 +345,24 @@ Since changing directories, pulling, adding, committing, and pushing all the tim
      git push origin main
      ```
 
-We will go over the workflow and how to use these scripts in more detail at the end.
+To use a script it's as easy as opening Git Bash in the build's root directory and typing `./update.sh`. Let's run both scripts right now since we have completed setting up our site's tech stack.
 
-1.
+```bash
+./update.sh
+```
+
+```bash
+./deploy.sh
+```
+
+## Activate GitHub Pages
+
+With our site set up and ready to go, let's turn on GitHub Pages for our site repository and get our content on the internet.
+
+1. On GitHub, go to your site repository.
+2. Click on `Settings`, then `Pages`
+3. Select the main branch in the root directory and click save.
+
+## Workflow
+
+With everything completed and set up
