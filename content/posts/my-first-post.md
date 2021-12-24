@@ -51,7 +51,5 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 
 1. Free
    * From beginning to end, this entire process is free. This blog you are looking at right now was made with these steps and did not cost me a single cent.
-
-
    * If you want your own custom domain then you would have to pay for that, but GitHub Pages is already set up to fully support custom domains.
 2. Workflow
