@@ -31,7 +31,7 @@ ShowPostNavLinks: true
 cover:
   image: uploads/blog-build-banner.jpg
   alt: The blog build tech stack
-  caption: With Hugo, Github Pages, & Forestry we can create a fully featured site.
+  caption: Utilizing Github Pages, Hugo, and Forestry.
   relative: false
   hidden: false
 editPost:
@@ -110,7 +110,7 @@ Before we get started, make sure you have a [GitHub](https://github.com "GitHub"
        > **Note:** If you set **Repo #2** to `blog` your website URL will be `<username>.github.io/blog/`, if instead you want `<username>.github.io` to direct to your site, then use that as the name.
        >
        > E.g. your username is **coolperson**, set **Repo #2** to `coolperson.github.io`.
-2. Throughout this guide I will refer to **Repo #1** as the build folder/directory and **Repo #2** as the site folder/directory.
+2. Throughout this guide I will refer to **Repo #1** as the build repository/folder/directory and **Repo #2** as the site repository/folder/directory.
 
 ## Hugo Setup
 
