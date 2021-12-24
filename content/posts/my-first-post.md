@@ -214,8 +214,10 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 8. You should see a message in the terminal with a line that says
 
           Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-9. Visit the local host link (in the above case `http://localhost:1313/`) in your web browser and you should see a live preview of how your site currently looks! Ain't she a beauty?  
-   ![](https://cambuchi.github.io/blog/uploads/firstlivepreview.png)
+9. Visit the local host link (in the above case `http://localhost:1313/`) in your web browser and you should see a live preview of how your site currently looks! Ain't she a beauty?
+
+![](https://cambuchi.github.io/blog/uploads/firstlivepreview.png)
+<img style="border: 2px solid rgb(155, 156, 157);" src="https://cambuchi.github.io/blog/uploads/firstlivepreview.png">
 
 ## Link Site Repo as a Submodule
 
@@ -236,7 +238,7 @@ Next we will link our site repository (**Repo #2**) so that when the site gets b
 
    > **Note:** depending on your Git/GitHub settings, `main` might have to be replaced with `master`. You can easily determine which to use with Git Bash. When pointed at a root folder, there will be parentheses after the file path telling you which branch you are on.
    >
-   > ![](https://cambuchi.github.io/blog/uploads/bashbranch.png)
+   > ![bash branch example](https://cambuchi.github.io/blog/uploads/bashbranch.png)
    >
    > As you can see from my example above in the blue text. My branch is `main`.
 3. Great! Now when we run `hugo` our site will be generated into `public`, when `public` gets pushed it heads into our site repository on GitHub, automatically triggering GitHub Pages to update our website.
