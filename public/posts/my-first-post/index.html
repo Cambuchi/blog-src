@@ -35,7 +35,7 @@
 <meta name=twitter:title content="Build a blog with CMS & Git functionality ">
 <meta name=twitter:description content="How to build and host a free blog with a content management system (CMS) for content creation that doesn't require diving into code or managing markdown files.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://cambuchi.github.io/blog/posts/"},{"@type":"ListItem","position":3,"name":"Build a blog with CMS \u0026 Git functionality ","item":"https://cambuchi.github.io/blog/posts/my-first-post/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Build a blog with CMS \u0026 Git functionality ","name":"Build a blog with CMS \u0026 Git functionality ","description":"How to build and host a free blog with a content management system (CMS) for content creation that doesn't require diving into code or managing markdown files.","keywords":["Blog","CMS","Git","Hugo","Forestry.io","GitHub","Web Development","Hosting","Development","Free"],"articleBody":"Introduction When it comes to building a blog/portfolio site, beginners are often directed to services like WordPress or Squarespace. This is understandable, as these closed systems guide you through the entire creation process. Past this beginner plateau however, the difficulty in creating a fully customizable site with all the bells and whistles increases dramatically.\nAfter reading this thread on reddit I realized that even for people with web development experience, the lack of easily available instructions have many defaulting back to this beginner step as well. If you think more advanced web-content creation involves diving into code or crafting HTML for every post, then the editors on website building services would indeed seem very appealing. However I am here to tell you that this is not the case, and that similar tools and easy to use workflows are available for custom built sites as well.\nThis guide aims to create a guided “mid-tier” plateau that those beginning their web development journey can reference to help them move beyond standard website builders.\nWhy?  Free  From beginning to end, this entire process is free. This blog you are looking at right now was made for free and does not cost anything to host. If you want your own custom domain then you would have to pay for that, but GitHub Pages is already set up to fully support custom domains.   Easy content creation with a CMS  Making content is just as easy as website builders. You get a fully functional text/markdown editor that automatically commits to your sites repository. No need to open code or edit HTML just to make a new post. Here is an example of me making a new post for my blog:    Easy to use/workflow  Create content on forestry (this commits to your repository) Run a script that does the following  Pull update from repository into your build directory Build site using Hugo Add, commit, and push changes to your repository   GitHub Pages detects that you made changes and automatically updates your site within minutes. After creating the content, it takes me less than 30 seconds to update my site with the new post.   Easy to set-up  Hugo and Hugo Themes do all of the heavy lifting for generating your website. No need to build all the logic and HTML for tags. categories, search functionality, syntax highlighting, etc. Generating a site and getting it online can be done in less than an hour.   Customization  Since everything is HTML and JavaScript, changing the site layout and little details is completely under your control. No more default footers advertising WordPress or Squarespace on your site. Toggle or button not where you want it? Moving elements around and custom CSS is easily done in the Hugo framework.    ","wordCount":"456","inLanguage":"en","image":"https://cambuchi.github.io/blog/uploads/blog-build-banner.jpg","datePublished":"2021-12-22T13:53:01-08:00","dateModified":"2021-12-22T13:53:01-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://cambuchi.github.io/blog/posts/my-first-post/"},"publisher":{"@type":"Organization","name":"cam nguyen | blog","logo":{"@type":"ImageObject","url":"https://cambuchi.github.io/blog/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Build a blog with CMS \u0026 Git functionality ","name":"Build a blog with CMS \u0026 Git functionality ","description":"How to build and host a free blog with a content management system (CMS) for content creation that doesn't require diving into code or managing markdown files.","keywords":["Blog","CMS","Git","Hugo","Forestry.io","GitHub","Web Development","Hosting","Development","Free"],"articleBody":"Introduction When it comes to building a blog/portfolio site, beginners are often directed to services like WordPress or Squarespace. This is understandable, as these closed systems guide you through the entire creation process. Past this beginner plateau however, the difficulty in creating a fully customizable site with all the bells and whistles increases dramatically.\nAfter reading this thread on reddit I realized that even for people with web development experience, the lack of easily available instructions have many defaulting back to this beginner step as well. If you think more advanced web-content creation involves diving into code or crafting HTML for every post, then the editors on website building services would indeed seem very appealing. However I am here to tell you that this is not the case, and that similar tools and easy to use workflows are available for custom built sites as well.\nThis guide aims to create a guided “mid-tier” plateau that those beginning their web development journey can reference to help them move beyond standard website builders.\nWhy?   Free\n From beginning to end, this entire process is free. This blog you are looking at right now was made for free and does not cost anything to host. If you want your own custom domain then you would have to pay for that, but GitHub Pages is already set up to fully support custom domains.    Easy content creation with a CMS\n Making content is just as easy as website builders. You get a fully functional text/markdown editor that automatically commits to your sites repository. No need to open code or edit HTML just to make a new post. Here is an example of me making a new post for my blog:    Easy to use/workflow\n Create content on forestry (this commits to your repository) Run a script that does the following  Pull update from repository into your build directory Build site using Hugo Add, commit, and push changes to your repository   GitHub Pages detects that you made changes and automatically updates your site within minutes. After creating the content, it takes me less than 30 seconds to update my site with the new post.    Easy to set-up\n Hugo and Hugo Themes do all of the heavy lifting for generating your website. No need to build all the logic and HTML for tags. categories, search functionality, syntax highlighting, etc. Generating a site and getting it online can be done in less than an hour.    Customization\n Since everything is HTML and JavaScript, changing the site layout and little details is completely under your control. No more default footers advertising WordPress or Squarespace on your site. Toggle or button not where you want it? Moving elements around and custom CSS is easily done in the Hugo framework.    ","wordCount":"456","inLanguage":"en","image":"https://cambuchi.github.io/blog/uploads/blog-build-banner.jpg","datePublished":"2021-12-22T13:53:01-08:00","dateModified":"2021-12-22T13:53:01-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://cambuchi.github.io/blog/posts/my-first-post/"},"publisher":{"@type":"Organization","name":"cam nguyen | blog","logo":{"@type":"ImageObject","url":"https://cambuchi.github.io/blog/favicon.ico"}}}</script>
 </head>
 <body class=dark id=top>
 <script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove('dark')</script>
@@ -107,24 +107,25 @@ How to build and host a free blog with a content management system (CMS) for con
 <p>This guide aims to create a guided &ldquo;mid-tier&rdquo; plateau that those beginning their web development journey can reference to help them move beyond standard website builders.</p>
 <h1 id=why>Why?<a hidden class=anchor aria-hidden=true href=#why>#</a></h1>
 <ol>
-<li><strong>Free</strong>
+<li>
+<p><strong>Free</strong></p>
 <ul>
 <li>From beginning to end, this entire process is free. This blog you are looking at right now was made for free and does not cost anything to host.</li>
 <li>If you want your own custom domain then you would have to pay for that, but GitHub Pages is already set up to fully support custom domains.</li>
 </ul>
 </li>
-<li><strong>Easy content creation with a CMS</strong>
+<li>
+<p><strong>Easy content creation with a CMS</strong></p>
 <ul>
 <li>Making content is just as easy as website builders. You get a fully functional text/markdown editor that automatically commits to your sites repository.</li>
 <li>No need to open code or edit HTML just to make a new post.</li>
 <li>Here is an example of me making a new post for my blog:</li>
 </ul>
-</li>
-</ol>
 <p><img loading=lazy src=uploads/buildsite.gif alt="making a new post in forestry" title="making a new post in forestry">
 </p>
-<ol start=3>
-<li><strong>Easy to use/workflow</strong>
+</li>
+<li>
+<p><strong>Easy to use/workflow</strong></p>
 <ul>
 <li>Create content on forestry (this commits to your repository)</li>
 <li>Run a script that does the following
@@ -138,13 +139,15 @@ How to build and host a free blog with a content management system (CMS) for con
 <li>After creating the content, it takes me less than 30 seconds to update my site with the new post.</li>
 </ul>
 </li>
-<li><strong>Easy to set-up</strong>
+<li>
+<p><strong>Easy to set-up</strong></p>
 <ul>
 <li>Hugo and Hugo Themes do all of the heavy lifting for generating your website.</li>
 <li>No need to build all the logic and HTML for tags. categories, search functionality, syntax highlighting, etc. Generating a site and getting it online can be done in less than an hour.</li>
 </ul>
 </li>
-<li><strong>Customization</strong>
+<li>
+<p><strong>Customization</strong></p>
 <ul>
 <li>Since everything is HTML and JavaScript, changing the site layout and little details is completely under your control. No more default footers advertising WordPress or Squarespace on your site.</li>
 <li>Toggle or button not where you want it? Moving elements around and custom CSS is easily done in the Hugo framework.</li>
