@@ -57,7 +57,8 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
    * No need to open code or edit HTML just to make a new post.
    * Here is an example of me making a new post for my blog:
 
-      ![making a new post in forestry](uploads/buildsite.gif "making a new post in forestry")
+![making a new post in forestry](uploads/buildsite.gif "making a new post in forestry")
+
 3. **Easy to use/workflow**
    * Create content on forestry (this commits to your repository)
    * Run a script that does the following
