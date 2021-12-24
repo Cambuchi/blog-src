@@ -4,6 +4,7 @@
 
 .highlight > div {
   border-radius: 10%;
+  background-color: unset !important;
 }
 
 code {
@@ -52,6 +53,10 @@ img[src*="#me"] {
 
 code {
   font-family: 'JetBrains Mono', monospace;
+}
+
+code:nth-child(1) > span:nth-child(1) {
+  margin: 0px !important;
 }
 
 @media (max-width: 530px) {
