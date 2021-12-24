@@ -192,7 +192,7 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 
           cd <folder-name>
    * E.g. `cd blog-build`
-4. Now that we're inside our Hugo site folder, run:
+4. Now that we're inside our build folder, run:
 
           git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
 
