@@ -202,11 +202,11 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 
    > The next couple steps are optional but will better flesh out your site on the first build and help you understand what's going on.
 5. **Optional:** Populate your config file.
-   * Go to: [https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml "https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml")
+   * Go to: [provided config.yml](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/config.yml "config.yml")
    * Download and replace your `config.yml` file with the file above or open your `config.yml` file and replace the contents.
    * Your config file should be in the root of your build folder.
 6. **Optional:** Create a skeleton post.
-   * Go to: [https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1 "https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1")
+   * Go to: [provided helloworld.md](https://github.com/Cambuchi/blog-src/blob/main/tutorial-guide-files/helloworld.md?plain=1 "helloworld.md")
    * Download the `helloworld.md` file and place it into `content\posts\` in the root of your build folder. E.g. `blog-build\content\posts\helloworld.md`.
 7. Build your site and see it on the local live server! With terminal pointed at your build's root directory, run:
 
@@ -248,7 +248,7 @@ Since changing directories, pulling, adding, committing, and pushing all the tim
 All scripts will be created and saved onto the build's root directory.
 
 1. First we will create a helper function to change directories since terminal cannot execute `cd` when called from a script. See [here](https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script "https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script") for more details.
-   * _path.sh_
+   * **_path.sh_**
 
      ```bash
      # Filename: path.sh
@@ -259,7 +259,7 @@ All scripts will be created and saved onto the build's root directory.
      }
      ```
 2. Next we will create a script that updates our build.
-   * _update.sh_
+   * **_update.sh_**
 
      ```bash
      #!/bin/sh
@@ -284,7 +284,7 @@ All scripts will be created and saved onto the build's root directory.
      git push origin main
      ```
 3. Lastly we will create a script that builds our static files and deploys our site.
-   * _deploy.sh_
+   * **_deploy.sh_**
 
      ```bash
      #!/bin/sh
