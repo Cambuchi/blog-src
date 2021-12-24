@@ -44,9 +44,9 @@ editPost:
 
 When it comes to building a blog/portfolio site, beginners are often directed to services like WordPress or Squarespace. This is understandable, as these website builders provide a tightly guided creation process. Past this beginner plateau however, the difficulty in creating and hosting a fully customizable site increases dramatically. Some services can alleviate this, but often for a price.
 
-After reading this [thread](https://www.reddit.com/r/webdev/comments/rlsxqk/if_i_was_going_to_create_my_own_blog_website_what/) on reddit I realized that even for people with web development experience, the lack of easily available instructions have many defaulting back to this beginner step as well. If you think more advanced web-content creation involves diving into code or crafting HTML for every post, then the editors on website building services would indeed seem very appealing. However I am here to tell you that this is not the case, and that similar tools and easy to use workflows are available for custom built sites as well.
+After reading this [thread](https://www.reddit.com/r/webdev/comments/rlsxqk/if_i_was_going_to_create_my_own_blog_website_what/) on reddit I realized that even for people with web development experience, the lack of easily available instructions have many defaulting back to this beginner step as well. If you think more advanced web-content creation involves diving into code or crafting HTML for every post, then website builders with built in editors would undoubtedly seem very appealing. However, I am here to tell you that this is not the case and that similar tools and easy to use workflows are available for custom built sites as well.
 
-This guide aims to create a guided "mid-tier" plateau that those beginning their web development journey can reference to help them move beyond standard website builders. We will build the site with Hugo, apply a site theme, use Forestry.io for our CMS, and host with GitHub Pages.
+This guide aims to create a guided "mid-tier" plateau that those beginning their web development journey can reference to help them move beyond standard website builders. We will build a site with Hugo, apply a site theme, use Forestry.io for our CMS, and host with GitHub Pages.
 
 ## Why this stack?
 
@@ -120,7 +120,7 @@ The following instructions are specific for Windows 10. Mac and Linux users can 
 ### Setup
 
 1. Create a new folder `C:\Hugo`.
-2. Create a subfolder in the Hugo folder `C:\Hugo\bin`.
+2. Create a sub-folder in the Hugo folder `C:\Hugo\bin`.
 3. Download the latest zipped Hugo executable for your system from [Hugo Releases](https://github.com/gohugoio/hugo/releases "https://github.com/gohugoio/hugo/releases").
    * For me this was `hugo_0.91.2_Windows-64bit.zip`.
 4. Extract all contents to your `C:\Hugo\bin` folder.
@@ -152,12 +152,12 @@ At this point we need to run a few commands to verify that the executable is rea
 2. Type `hugo help` and hit enter.
 3. You should see output that starts with:
 
-          hugo is the main command, used to build your Hugo site.
+       hugo is the main command, used to build your Hugo site.
           
-          Hugo is a Fast and Flexible Static Site Generator
-          built with love by spf13 and friends in Go.
+       Hugo is a Fast and Flexible Static Site Generator
+       built with love by spf13 and friends in Go.
        
-          Complete documentation is available at https://gohugo.io/.
+       Complete documentation is available at https://gohugo.io/.
 4. If you see that, success! You have correctly installed Hugo.
 5. If the installation was not successful, please consult the official Hugo instructions for installing on Windows [here](https://gohugo.io/getting-started/installing/#windows "Hugo Windows Install").
 
@@ -170,19 +170,19 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 1. On your build repository on GitHub (Repo#1), copy the HTTPS link. It should look something like `https://github.com/<username>/blog-build.git`.
 2. Git Bash into the folder where you want to keep your build directory.
 
-          cd documents/github
+       cd documents/github
    * Pay special attention to the slashes! Windows file paths with `\` will not work in Unix based utilities.
    * Alternatively, you can `right click` in the folder you want and select `Git Bash here` from the context menu.
 3. Clone your build repository:
 
-          git clone https://github.com/<username>/blog-build.git
+       git clone https://github.com/<username>/blog-build.git
 4. A new empty folder with your repository name should now exist in the directory. E.g. `documents\github\blog-build`.
 
 ### Build the site with Hugo and attach a theme.
 
 1. In the Git Bash terminal, build your Hugo site into the newly created directory with the following:
 
-          hugo new site <folder-name> -f yml --force
+       hugo new site <folder-name> -f yml --force
    * E.g. `hugo new site blog-build -f yml --force`.
    * You should see a message in the terminal congratulating you.
 
@@ -190,11 +190,11 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 2. Next is theming, our theme in this example will be [PaperMod](https://github.com/adityatelange/hugo-PaperMod "PaperMod Theme"). Feel free to browse the many themes at [https://themes.gohugo.io/](https://themes.gohugo.io/ "https://themes.gohugo.io/") for other options.
 3. In the terminal, go into the build directory.
 
-          cd <folder-name>
+       cd <folder-name>
    * E.g. `cd blog-build`
 4. Now that we're inside our build folder, run:
 
-          git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
+       git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
 
    > **Note:** to update the theme, go into the PaperMod theme folder and git pull.
    >
@@ -210,10 +210,10 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
    * Download the `helloworld.md` file and place it into `content\posts\` in the root of your build folder. E.g. `blog-build\content\posts\helloworld.md`.
 7. Build your site and see it on the local live server! With terminal pointed at your build's root directory, run:
 
-          hugo server
+       hugo server
 8. You should see a message in the terminal with a line that says
 
-          Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+       Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 9. Visit the local host link (in the above case `http://localhost:1313/`) in your web browser and you should see a live preview of how your site currently looks! Ain't she a beauty?
 
 ![initial site preview](https://cambuchi.github.io/blog/uploads/firstlivepreview.png)
@@ -224,16 +224,16 @@ Next we will link our site repository (**Repo #2**) so that when the site gets b
 
 1. First we need to remove the `public` directory from the build repository. This is so that we can use it as a submodule for our site repository. Inside the build root directory:
 
-          rm -rf public
+       rm -rf public
 2. On your site repository on GitHub, copy the HTTPS link. It should look something like `https://github.com/<username>/blog.git`. With that we can add our site directory as a submodule:
 
-          git submodule add -b main
-          <HTTPS-repository-link> public
+       git submodule add -b main
+       <HTTPS-repository-link> public
 
    As an actual example:
 
-          git submodule add -b main
-          https://github.com/coolperson/blog.git public
+       git submodule add -b main
+       https://github.com/coolperson/blog.git public
 
    > **Note:** depending on your Git/GitHub settings, `main` might have to be replaced with `master`. You can easily determine which to use with Git Bash. When pointed at a root folder, there will be parentheses after the file path telling you which branch you are on.
    >
@@ -242,10 +242,37 @@ Next we will link our site repository (**Repo #2**) so that when the site gets b
    > As you can see from my example above in the blue text. My branch is `main`.
 3. Great! Now when we run `hugo` our site will be generated into `public`, when `public` gets pushed it heads into our site repository on GitHub, automatically triggering GitHub Pages to update our website.
 
+Let's populate our GitHub's build repository so that we have a branch for our CMS to hook onto. This first commit will be the only time that we do this manually. Enter the following while the Terminal is pointed at the build's root folder.
+
+```bash
+git add .
+git commit -m "First commit"
+git push origin main
+```
+
+## Forestry.io Setup (CMS)
+
+Now that our site is built and rigged up to GitHub, let's add in a CMS so that content creation is as simple as possible. Before we get started head on over to [Forestry.io](https://forestry.io/ "Forestry.io") and create your account. It’s free for personal use and allows you to add up to 3 users per website.
+
+1. In the top right-hand corner of the page, click `Add Site`.
+   * ![forestry-add-site](https://cambuchi.github.io/blog/uploads/forestry-add-site.png)
+2. Then select `Hugo` as your static site generator.
+   * ![forestry-pick-hugo](https://cambuchi.github.io/blog/uploads/forestry-pick-hugo.png)
+3. Choose GitHub as the Git provider.
+   * ![forestry-pick-github](https://cambuchi.github.io/blog/uploads/forestry-pick-github.png)
+4. A browser window (not pictured) should then pop up asking for your credentials in order to authenticate. 
+5. After authentication simply select the your **build** repository (Repo #1), not your site repository. Pick the `main` branch of your repository.
+   * ![forestry-pick-repo](https://cambuchi.github.io/blog/uploads/forestry-pick-repo.png)
+
+   > Forestry should detect your config file and display `Config file found!`. If not, then make sure Hugo is properly set up.
+
+That's it! Forestry is now set up as a CMS for your site. We will go over the workflow and how to use Forestry in more detail at the end.
+
 ## Automating
 
-Since changing directories, pulling, adding, committing, and pushing all the time is tedious, we will also write a few bash scripts to automate updating our build and deploying our site.  
-All scripts will be created and saved onto the build's root directory.
+Since changing directories, pulling, adding, committing, and pushing all the time is tedious, we will also write a few bash scripts to automate updating our build and deploying our site.
+
+> **Note:** All scripts will be created and saved onto the build's root directory.
 
 1. First we will create a helper function to change directories since terminal cannot execute `cd` when called from a script. See [here](https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script "https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script") for more details.
    * **_path.sh_**
@@ -314,3 +341,7 @@ All scripts will be created and saved onto the build's root directory.
      # Push source and deploy. 
      git push origin main
      ```
+
+We will go over the workflow and how to use these scripts in more detail at the end.
+
+1.
