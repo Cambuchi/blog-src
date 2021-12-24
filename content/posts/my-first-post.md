@@ -172,6 +172,7 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
 
           cd documents/github
    * Pay special attention to the slashes! Windows file paths with `\` will not work in Unix based utilities.
+   * Alternatively, you can `right click` in the folder you want and select `Git Bash here` from the context menu.
 3. Clone your build repository:
 
           git clone https://github.com/<username>/blog-build.git
