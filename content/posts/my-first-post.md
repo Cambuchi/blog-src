@@ -304,6 +304,9 @@ Since changing directories, pulling, adding, committing, and pushing all the tim
      # Update with any commits the CMS might have added.
      git pull
      
+     # Build the project. 
+     hugo
+     
      # Add changes to git. 
      git add . 
      
@@ -328,9 +331,6 @@ Since changing directories, pulling, adding, committing, and pushing all the tim
      
      # Status message.
      printf "\033[0;32mDeploying updates to GitHub…\033[0m\n" 
-     
-     # Build the project. 
-     hugo
      
      # Go to public folder.
      public
@@ -389,6 +389,7 @@ With our site published online, let's go through the work flow process. The firs
 2. Click Save on the top right when you are done making your content. This commits your post markdown file into your GitHub repository.
 3. Git Bash into your build directory on your machine.
 4. Run `update.sh` and `deploy.sh`
+
 ```bash
 ./update.sh
 ```
@@ -396,4 +397,5 @@ With our site published online, let's go through the work flow process. The firs
 ```bash
 ./deploy.sh
 ```
+
 That's it! Your web site should update with the new content in less than a minute.
