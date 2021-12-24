@@ -1,5 +1,5 @@
 .chroma {
-  background-color: #282a36;
+  background-color: unset;
 }
 
 .highlight > div {
@@ -7,7 +7,7 @@
 }
 
 code {
-  background-color: #282a36 !important;
+  background-color: unset;
 }
 
 .logo-switches {
