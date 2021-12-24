@@ -113,7 +113,7 @@ Before we get started, make sure you have a [GitHub](https://github.com "GitHub"
    >
    > Note:
    > * If you set **Repo #2** to `blog` your website URL will be `<username>.github.io/blog/`, if instead you want `<username>.github.io` to direct to your site, then use that as the name.
-   > * E.g. your username is _coolperson_, set **Repo #2** to _`coolperson`_`.github.io`.
+   > * E.g. your username is **coolperson**, set **Repo #2** to `coolperson.github.io`.
 
 # Hugo Setup
 
@@ -156,12 +156,10 @@ At this point we need to run a few commands to verify that the executable is rea
 2. Type `hugo help` and hit enter.
 3. You should see output that starts with:
 
-   ```{linenos=false}
-   hugo is the main command, used to build your Hugo site.
-   
-   Hugo is a Fast and Flexible Static Site Generator
-   built with love by spf13 and friends in Go.
-   
+          hugo is the main command, used to build your Hugo site.
+          
+          Hugo is a Fast and Flexible Static Site Generator
+          built with love by spf13 and friends in Go.
+
    Complete documentation is available at https://gohugo.io/.
-   ```
 4. If you see that, success! You have correctly installed Hugo.
