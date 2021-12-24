@@ -50,6 +50,10 @@ img[src*="#me"] {
   font-size: 0.8rem;
 }
 
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
 @media (max-width: 530px) {
   .social-icons {
     justify-content: space-evenly;
@@ -75,5 +79,5 @@ img[src*="#me"] {
   }
   .footer span:last-child {
     white-space: normal;
-}
+  }
 }
