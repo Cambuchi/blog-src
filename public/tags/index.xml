@@ -12,11 +12,92 @@
     <copyright>© [Cam Nguyen](https://cambuchi.github.io/blog).</copyright>
     <lastBuildDate>Wed, 22 Dec 2021 13:53:01 -0800</lastBuildDate><atom:link href="https://cambuchi.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>first</title>
-      <link>https://cambuchi.github.io/blog/tags/first/</link>
+      <title>Blog</title>
+      <link>https://cambuchi.github.io/blog/tags/blog/</link>
       <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
       
-      <guid>https://cambuchi.github.io/blog/tags/first/</guid>
+      <guid>https://cambuchi.github.io/blog/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CMS</title>
+      <link>https://cambuchi.github.io/blog/tags/cms/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/cms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Development</title>
+      <link>https://cambuchi.github.io/blog/tags/development/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forestry.io</title>
+      <link>https://cambuchi.github.io/blog/tags/forestry.io/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/forestry.io/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Free</title>
+      <link>https://cambuchi.github.io/blog/tags/free/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/free/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://cambuchi.github.io/blog/tags/git/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>https://cambuchi.github.io/blog/tags/github/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hosting</title>
+      <link>https://cambuchi.github.io/blog/tags/hosting/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/hosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://cambuchi.github.io/blog/tags/hugo/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Development</title>
+      <link>https://cambuchi.github.io/blog/tags/web-development/</link>
+      <pubDate>Wed, 22 Dec 2021 13:53:01 -0800</pubDate>
+      
+      <guid>https://cambuchi.github.io/blog/tags/web-development/</guid>
       <description></description>
     </item>
     

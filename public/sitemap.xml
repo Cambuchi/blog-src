@@ -2,19 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cambuchi.github.io/blog/</loc>
-    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
-  </url><url>
-    <loc>https://cambuchi.github.io/blog/tags/first/</loc>
+    <loc>https://cambuchi.github.io/blog/tags/blog/</loc>
     <lastmod>2021-12-22T13:53:01-08:00</lastmod>
   </url><url>
     <loc>https://cambuchi.github.io/blog/posts/my-first-post/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/cms/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/development/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/forestry.io/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/free/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/git/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/github/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/hosting/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/hugo/</loc>
     <lastmod>2021-12-22T13:53:01-08:00</lastmod>
   </url><url>
     <loc>https://cambuchi.github.io/blog/posts/</loc>
     <lastmod>2021-12-22T13:53:01-08:00</lastmod>
   </url><url>
     <loc>https://cambuchi.github.io/blog/tags/</loc>
+    <lastmod>2021-12-22T13:53:01-08:00</lastmod>
+  </url><url>
+    <loc>https://cambuchi.github.io/blog/tags/web-development/</loc>
     <lastmod>2021-12-22T13:53:01-08:00</lastmod>
   </url><url>
     <loc>https://cambuchi.github.io/blog/archives/</loc>
