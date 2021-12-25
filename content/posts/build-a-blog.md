@@ -52,7 +52,7 @@ This guide aims to create a guided "mid-tier" plateau that those beginning their
 
 ### 1. Free
 
-* From beginning to end, this entire process is free. This blog you are looking at right now was made for free and does not cost anything to host.
+* From beginning to end, this entire process is free. This blog you are looking at right now was created with this stack for free and does not cost anything to host.
 * GitHub Pages is already set up to easily support paid custom domains if you want a different URL for your blog.
 
 ### 2. Easy content creation with a CMS
@@ -418,6 +418,6 @@ Here's a demo of me creating a post, updating the site, and seeing the changes l
 
 With this tech stack, having complete control over your site while not compromising the content creation flow is easily achievable. Imagine handing over a mature site to a content creator or team of writers who don't need to understand any development to create content for the site.
 
-Now when it comes to customizing your site, I find the best way is to start a local live server with `hugo server` and to fiddle around with your configuration files and layouts. If necessary, do not be afraid to look at the [Hugo documentation](https://gohugo.io/documentation/ "Hugo Documentation"). Your Hugo theme's GitHub repository might have some tips as well. If you are familiar with web development this should not be a huge hurdle. 
+Now when it comes to customizing your site, I find the best way is to start a local live server with `hugo server` and to fiddle around with your configuration files and layouts. If necessary, do not be afraid to look at the [Hugo documentation](https://gohugo.io/documentation/ "Hugo Documentation"). Your Hugo theme's GitHub repository might have some tips as well. If you are familiar with web development this should not be a huge hurdle.
 
 Join me next time where I will dive into how to move elements around, add elements, add pages, set custom CSS, in other words: how to customize your Hugo site. Thanks for reading!
