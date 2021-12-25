@@ -95,9 +95,9 @@ params:
 
   socialIcons:
     - name: linkedin
-      url: "https://github.com/"
+      url: "https://www.linkedin.com/in/cam-nguyen-6a1ab257/"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/Cambuchi"
 
 
   analytics:
@@ -127,7 +127,7 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
+    keys: ["title", "permalink", "summary", "content", "desc", "entry-header"]
 menu:
   main:
     - identifier: search
@@ -144,7 +144,7 @@ menu:
       weight: 3
     - identifier: resume
       name: resume
-      url: https://example.org
+      url: https://cambuchi.github.io/resume/
       weight: 4
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: false

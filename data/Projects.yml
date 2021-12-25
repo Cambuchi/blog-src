@@ -1,15 +1,37 @@
-- id: low-calorie
-  link: https://#
-  desc: Testing description 1
+- id: To Do List
+  link: https://cambuchi.github.io/odin-todo-list/
+  desc: Fully featured to-do-list app written entirely in javascript and built 
+        with webpack. Uses local storage to keep track of task history.
 
-- id: algo-visualization
-  link: https://#
-  desc: Testing description 2
+- id: Unbeatable Tic-Tac-Toe
+  link: https://cambuchi.github.io/odin-tictactoe-ai/
+  desc: Play against an unbeatable Tic Tac Toe opponent. Written in Javascript 
+        and utilizing min-max recursion strategy to determine AI moves. 
 
-- id: kox
-  link: https://#
-  desc: Testing description 3
+- id: Potions++
+  link: https://codepen.io/cambuchi/full/BaWPJBj
+  desc: A fun example product page for a Dungeons and Dragons NPC.
 
-- id: konverter
-  link: https://#
-  desc: Testing description 4
+- id: Sagacious Saga Bot
+  link: https://github.com/Cambuchi/Sagacious-Saga-Bot
+  desc: A python app to automatically play Sagacious Saga using floodfill 
+        recursion strategy. 
+
+- id: The Library
+  link: https://cambuchi.github.io/odin-library/
+  desc: Web app to keep track of which books in your library have been read 
+        with an easy to use UI. Uses google books API to download book covers 
+        and page counts.
+
+- id: Basic Calculator
+  link: https://cambuchi.github.io/Calculator/
+  desc: A simple calculator built with javascript and made pretty with html 
+        and css. 
+
+- id: Manga Updates Webscraper
+  link: https://github.com/Cambuchi/Manga-Updates-Webscraper
+  desc: Script that scrapes information on mangas from mangaupdates.com and 
+        writes the data into a csv file. Dependent on requests and bs4. Used to 
+        help determine which mangas are good targets for translating. Example 
+        of 10 mangas scraped provided.  
+

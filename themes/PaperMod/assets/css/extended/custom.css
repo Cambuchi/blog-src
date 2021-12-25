@@ -9,6 +9,7 @@
 
 code {
   background-color: unset;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .logo-switches {
@@ -49,10 +50,6 @@ img[src*="#me"] {
 
 .footer * {
   font-size: 0.8rem;
-}
-
-code {
-  font-family: 'JetBrains Mono', monospace;
 }
 
 code > span:nth-child(1) {
