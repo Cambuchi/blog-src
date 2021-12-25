@@ -222,8 +222,8 @@ Now for the meat and potatoes. We will build the site with Hugo, attach our them
         hugo server
 8. You should see a message in the terminal with a line that says
 
-        Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-9. Visit the local host link (in the above case `http://localhost:1313/`) in your web browser and you should see a live preview of how your site currently looks! Ain't she a beauty?
+        Web Server is available at http://localhost:1313/blog/ (bind address 127.0.0.1)
+9. Visit the local host link (in the above case `http://localhost:1313/blog/`) in your web browser and you should see a live preview of how your site currently looks! Ain't she a beauty?
 
 ![initial site preview](https://cambuchi.github.io/blog/uploads/firstlivepreview.png)
 
@@ -247,13 +247,23 @@ Next we will link our site repository (**Repo #2**) so that when the site gets b
    > ![bash branch example](https://cambuchi.github.io/blog/uploads/bashbranch.png)
    >
    > As you can see from my example above in the blue text. My branch is `main`.
-3. Great! Now when we run `hugo` our site will be generated into `public`, when `public` gets pushed it heads into our site repository on GitHub, automatically triggering GitHub Pages to update our website.
+3. Great! Now when we run `hugo` our site will be generated into `public`, and since `public` is a submodule with an origin at our site repository, when `public` gets pushed it heads into GitHub, automatically triggering GitHub Pages to update our website.
 
-Let's populate our GitHub's build repository so that we have a branch for our CMS to hook onto. This first commit will be the only time that we do this manually. Enter the following while the Terminal is pointed at the build's root folder.
+Let's populate our GitHub's build repository so that we have a branch for our CMS to hook onto and our site repository so that there is a commit for git to main branch. This first commit will be the only time that we do this manually. Enter the following while the Terminal is pointed at the build's root folder.
 
+        hugo
         git add .
         git commit -m "First commit"
         git push origin main
+
+Now bash into the `public` folder and run those same commands.
+
+```bash
+	cd public
+    git add .
+    git commit -m "First commit"
+    git push origin main
+```
 
 ## Forestry.io Setup (CMS)
 
@@ -385,8 +395,8 @@ With our site published online, let's go through the work flow process. The firs
 
 ### Regular workflow
 
-1. Create a new post on Forestry, nothing will stop you now.
-2. Click Save on the top right when you are done making your content. This commits your post markdown file into your GitHub repository.
+1. Create a new post on Forestry.
+2. Click Save on the top right when you are done. This commits your post markdown file into your GitHub repository.
 3. Git Bash into your build directory on your machine.
 4. Run `update.sh` and then `deploy.sh`
 
@@ -399,3 +409,15 @@ With our site published online, let's go through the work flow process. The firs
 ```
 
 That's it! Your web site should update with the new content in less than a minute.
+
+Here's a demo of me creating a post, updating the site, and seeing the changes live online in less than a minute.
+
+![](https://cambuchi.github.io/blog/uploads/buildpost.gif)
+
+## Conclusion
+
+With this tech stack, having complete control over your site while not compromising the content creation flow is easily achievable. Imagine handing over a mature site to a content creator or team of writers who don't need to understand any development to create content for the site.
+
+Now when it comes to customizing your site, I find the best way is to start a local live server with `hugo server` and to fiddle around with your configuration files and layouts. If necessary, do not be afraid to look at the [Hugo documentation](https://gohugo.io/documentation/ "Hugo Documentation"). Your Hugo theme's GitHub repository might have some tips as well. If you are familiar with web development this should not be a huge hurdle. 
+
+Join me next time where I will dive into how to move elements around, add elements, add pages, set custom CSS, in other words: how to customize your Hugo site. Thanks for reading!
