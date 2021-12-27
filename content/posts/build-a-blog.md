@@ -258,12 +258,10 @@ Let's populate our GitHub's build repository so that we have a branch for our CM
 
 Now bash into the `public` folder and run those same commands.
 
-```bash
-	cd public
-    git add .
-    git commit -m "First commit"
-    git push origin main
-```
+        cd public
+        git add .
+        git commit -m "First commit"
+        git push origin main
 
 ## Forestry.io Setup (CMS)
 
