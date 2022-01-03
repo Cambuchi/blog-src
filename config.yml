@@ -49,11 +49,11 @@ params:
   assets:
     disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "favicon.ico"
-    favicon16x16: "favicon-16x16.png"
-    favicon32x32: "favicon-32x32.png"
-    apple_touch_icon: "apple-touch-icon.png"
-    safari_pinned_tab: "favicon-32x32.png"
+    favicon: "static/favicon.ico"
+    favicon16x16: "static/favicon-16x16.png"
+    favicon32x32: "static/favicon-32x32.png"
+    apple_touch_icon: "static/apple-touch-icon.png"
+    safari_pinned_tab: "static/favicon-32x32.png"
 
   label:
     text: "cam nguyen | blog"
@@ -79,7 +79,7 @@ params:
   homeInfoParams:
     Title: "Hi, I'm Cam!"
     Image: >
-      ![Cam Nguyen Headshot](me.jpg#me)
+      ![Cam Nguyen Headshot](static/me.jpg#me)
     Content: 
       Welcome to my blog. This is a place for me to mostly talk about my
       developments in coding. Based in California, I am a first generation 

@@ -62,4 +62,4 @@ Contributions, issues, and feature requests are welcome!
 
 ## Show your support
 
-If you got until here, show your love hitting the ⭐️ button, I'd really appreciate it.
+If you're still  here, show your love by hitting the ⭐️ button, I'd really appreciate it.
