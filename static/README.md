@@ -10,7 +10,7 @@
 
 [![hugo-papermod](https://img.shields.io/badge/Hugo--Themes-@PaperMod-blue)](https://themes.gohugo.io/themes/hugo-papermod/)
 
-<div align="center"><img src="blog-README-cover.png" alt="image" width="900" /></div>
+<div align="center"><img src="files/blog-README-cover.png" alt="image" width="900" /></div>
 
 ## Features
 
