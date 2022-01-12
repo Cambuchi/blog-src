@@ -265,6 +265,9 @@ With that out of the way, let's add our pagination number items. First we add th
 const paginate = (array, current) => {
   // ... collapsed previous code for clarity
  
+  //  +++ clear previous pagination numbers so that we can redraw them
+  paginateItems.innerHTML = '';
+ 
   // +++ add the pagination number items
   // +++ if the total page number is low, just render all the page numbers
   if (numPages < 8) {
@@ -323,6 +326,9 @@ Now our previous paginate number functionality looks much cleaner.
 const paginate = (array, current) => {
   // ... collapsed previous code for clarity
  
+  // clear previous pagination numbers so that we can redraw them
+  paginateItems.innerHTML = '';
+ 
   // add the pagination number items
   // if the total page number is low, just render all the page numbers
   if (numPages < 8) {
@@ -367,6 +373,9 @@ Let's start with the first case, the early ranges.
 const paginate = (array, current) => {
   // ... collapsed previous code for clarity
  
+  // clear previous pagination numbers so that we can redraw them
+  paginateItems.innerHTML = '';
+ 
   // add the pagination number items
   // if the total page number is low, just render all the page numbers
   if (numPages < 8) {
@@ -398,6 +407,9 @@ Extending this pattern to the next two display cases is relatively straightforwa
 const paginate = (array, current) => {
   // ... collapsed previous code for clarity
  
+  // clear previous pagination numbers so that we can redraw them
+  paginateItems.innerHTML = '';
+ 
   // add the pagination number items
   // if the total page number is low, just render all the page numbers
   if (numPages < 8) {
@@ -422,7 +434,7 @@ const paginate = (array, current) => {
       }
       
     // +++ if the current page number is in the middle (3 < current < max - 2)
-    } else if (current > 3 || current < numPages - 2) {
+    } else if (current > 3 && current < numPages - 2) {
       // +++ render the first number
       addPaginateNum(array, 1, current, itemsPerPage, numPages);
       // +++ render a paginate skip
