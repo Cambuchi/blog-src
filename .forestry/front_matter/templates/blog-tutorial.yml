@@ -86,9 +86,11 @@ fields:
   - type: text
     name: URL
     label: URL
+    default: https://github.com/Cambuchi/blog-src/issues
   - type: text
     name: Text
     label: Text
+    default: Suggest changes...
   - type: boolean
     name: appendFilePath
     label: appendFilePath
