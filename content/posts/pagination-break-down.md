@@ -124,8 +124,6 @@ Lets' handle any possible errors that might occur.
 
 Alright, let's build our pagination module!
 
-> Note: comments with `+++` in them indicates that the code below is new
-
 Our HTML model in this example covers just the essentials:
 
 ```html
@@ -143,9 +141,11 @@ Our HTML model in this example covers just the essentials:
 </body>
 ```
 
-> Note: our previous and next buttons are using &lt; and &gt; to represent the `<` and `>` characters.
+> Note: our previous and next buttons are using html code to represent the `<` and `>` characters.
 
 First let's enter in our parameters, set our design variables, and do initial prep:
+
+> Note: comments with `+++` in them indicates that the code below is new
 
 ```js
 // +++ create the pagination for the current array and page number
@@ -212,7 +212,7 @@ const paginate = (array, current) => {
   }
 
   // +++ apply functionality to the previous and next buttons
-  // +++ target the previous DOM elements
+  // +++ target the previous and next DOM elements
   let next = document.getElementById('next');
   let previous = document.getElementById('previous');
   // +++ remove previous event handlers (so event handlers don't pile up)
