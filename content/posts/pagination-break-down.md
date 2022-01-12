@@ -31,6 +31,13 @@ appendFilePath = false
 
 What is pagination? Let's say you have a list of items you want to display on your site, displaying the entire list at once can be problematic if it's extremely large or if each list item is resource intensive such as requiring an API call. Pagination is a way to display only a set number of items on your page while allowing easy access to the other items if needed. This is a guide to walk you through the thought process, white-boarding, and implementation of pagination in vanilla JavaScript.
 
+> For those of you that just want the code and don't need the breakdown, I gotchu:
+>
+> * CodePen examples below:
+>   * Long list: [https://codepen.io/cambuchi/pen/QWqJdxv](https://codepen.io/cambuchi/pen/QWqJdxv "https://codepen.io/cambuchi/pen/QWqJdxv")
+>   * Short list: [https://codepen.io/cambuchi/pen/RwLqpra](https://codepen.io/cambuchi/pen/RwLqpra "https://codepen.io/cambuchi/pen/RwLqpra")
+> * [Just the finished code]()
+
 # White-boarding & Design Process
 
 Our pagination module will consist of a single function with a couple callbacks, let's go over what that function will need in order to be successful:
@@ -637,17 +644,21 @@ const renderContent = (array, current, itemsPerPage, numPages) => {
 With a long list:
 
 <p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="result" data-slug-hash="QWqJdxv" data-user="cambuchi" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/cambuchi/pen/QWqJdxv">
-  Untitled</a> by Cambuchi (<a href="https://codepen.io/cambuchi">@cambuchi</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
+<span>See the Pen <a href="https://codepen.io/cambuchi/pen/QWqJdxv">
+Untitled</a> by Cambuchi (<a href="https://codepen.io/cambuchi">@cambuchi</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 With a shorter list:
 
 <p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="result" data-slug-hash="vYeQxLL" data-user="cambuchi" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/cambuchi/pen/vYeQxLL">
-  Pagination Example Short List</a> by Cambuchi (<a href="https://codepen.io/cambuchi">@cambuchi</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
+<span>See the Pen <a href="https://codepen.io/cambuchi/pen/vYeQxLL">
+Pagination Example Short List</a> by Cambuchi (<a href="https://codepen.io/cambuchi">@cambuchi</a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+# Conclusion
+
+I hope you've enjoyed how I wrap my head around making pagination. With a little thoughtfulness, making a consistent predictable pagination is relatively simple. Till next time!
