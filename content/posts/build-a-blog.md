@@ -38,6 +38,7 @@ editPost:
   URL: https://github.com/Cambuchi/blog-src/blob/main/content
   Text: Suggest Changes
   appendFilePath: true
+summary: This guide aims to create a guided "mid-tier" plateau that those beginning their web development journey can reference to help them move beyond standard website builders. We will build a site with Hugo, apply a site theme, use Forestry.io for our CMS, and host with GitHub Pages.
 
 ---
 ## Introduction

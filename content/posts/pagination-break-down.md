@@ -15,6 +15,7 @@ searchHidden = false
 showToc = true
 tags = ["JavaScript", "Tutorial", "Code", "Web Development", "HTML"]
 title = "Pagination Break Down"
+summary = "Pagination is a way to display only a set number of items on your page while allowing easy access to the other items if needed. This is a guide to walk you through the thought process, white-boarding, and implementation of pagination in vanilla JavaScript."
 [cover]
 alt = "Example of pagination."
 caption = "Consistent, dynamic pagination that does not shift in size is the goal."
@@ -25,6 +26,7 @@ relative = false
 Text = ""
 URL = ""
 appendFilePath = false
+
 
 +++
 # Introduction

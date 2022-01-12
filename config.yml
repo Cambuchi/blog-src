@@ -83,15 +83,11 @@ params:
     Content: 
       Welcome to my blog. This is a place for me to mostly talk about my
       developments in coding. Based in California, I am a first generation 
-      immigrant from Vietnam currently trying to become a software developer.  
-
-      
-      - 
-
-
-      - You can reach me at cam.manh.nguyen@gmail.com. 
-      
-      - Let's keep in touch!
+      immigrant from Vietnam currently trying to become a software developer.
+    Connect:
+      You can reach me at cam.manh.nguyen@gmail.com.
+    Connect2:
+      Let's keep in touch!
 
   socialIcons:
     - name: linkedin

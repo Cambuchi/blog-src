@@ -3,10 +3,17 @@
   desc: Fully featured to-do-list app written entirely in javascript and built 
         with webpack. Uses local storage to keep track of task history.
 
-- id: Yu-Gi-Oh! Legacy of the Duelist Link Evolution Card Finder
+- id: Yu-Gi-Oh! LOTD Link Evolution Card Finder
   link: https://cambuchi.github.io/LOTD-Link-Evolution-Card-Finder/
-  desc: Feature rich card finder for the Yu-Gi-Oh video game. Catered to those 
-        who don't follow the franchise. Built while sick with covid.
+  desc: When I had Covid, during my 2 week quarantine and recovery I got into 
+        Yu-Gi-Oh through "Legacy of the Duelist Link Evolution". Having not 
+        kept up with the franchise, finding out where cards were was a huge 
+        pain because over 10,000 cards were hidden behind character related 
+        booster packs & challenge duels. Other card finders did not have any 
+        visual aid or provide card information so they were useless to me 
+        because I had no idea who "Gong Strong" or "Akiza Izinski" etc were. 
+        This card finder utilizes the Yugipedia mediawiki API to grab images 
+        and extra information. 
 
 - id: Unbeatable Tic-Tac-Toe
   link: https://cambuchi.github.io/odin-tictactoe-ai/
@@ -25,18 +32,22 @@
 - id: The Library
   link: https://cambuchi.github.io/odin-library/
   desc: Web app to keep track of which books in your library have been read 
-        with an easy to use UI. Uses google books API to download book covers 
+        with an easy to use UI. Uses Google Books API to download book covers 
         and page counts.
+
+- id: Emmet Abbreviation Documentation Library
+  link: https://codepen.io/cambuchi/full/YzZdVwM
+  desc: CodePen demonstrating ability to write technical documentation.
 
 - id: Basic Calculator
   link: https://cambuchi.github.io/Calculator/
   desc: A simple calculator built with javascript and made pretty with html 
-        and css. 
+        and css. Features optional keyboard inputs.
 
 - id: Manga Updates Webscraper
   link: https://github.com/Cambuchi/Manga-Updates-Webscraper
   desc: Script that scrapes information on mangas from mangaupdates.com and 
         writes the data into a csv file. Dependent on requests and bs4. Used to 
         help determine which mangas are good targets for translating. Example 
-        of 10 mangas scraped provided.  
+        of 10 mangas scraped provided.
 

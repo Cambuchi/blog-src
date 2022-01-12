@@ -12,6 +12,15 @@ code {
   font-family: 'JetBrains Mono', monospace;
 }
 
+.project-entry-content {
+  display: flex !important;
+  margin: 8px 0;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
 .logo-switches {
   margin: 0;
 }
