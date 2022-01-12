@@ -3,6 +3,11 @@
   desc: Fully featured to-do-list app written entirely in javascript and built 
         with webpack. Uses local storage to keep track of task history.
 
+- id: Yu-Gi-Oh! Legacy of the Duelist Link Evolution Card Finder
+  link: https://cambuchi.github.io/LOTD-Link-Evolution-Card-Finder/
+  desc: Feature rich card finder for the Yu-Gi-Oh video game. Catered to those 
+        who don't follow the franchise. Built while sick with covid.
+
 - id: Unbeatable Tic-Tac-Toe
   link: https://cambuchi.github.io/odin-tictactoe-ai/
   desc: Play against an unbeatable Tic Tac Toe opponent. Written in Javascript 
