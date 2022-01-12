@@ -94,6 +94,7 @@ const paginate = (array, current) => {
   }
 };
 
+// add a single pagination number to the DOM
 const addPaginateNum = (array, i, current, itemsPerPage, numPages) => {
   // target our DOM elements for manipulation
   const paginateItems = document.getElementById('paginate-items');
