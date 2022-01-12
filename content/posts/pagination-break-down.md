@@ -36,7 +36,7 @@ What is pagination? Let's say you have a list of items you want to display on yo
 > * CodePen examples below:
 >   * Long list: [https://codepen.io/cambuchi/pen/QWqJdxv](https://codepen.io/cambuchi/pen/QWqJdxv "https://codepen.io/cambuchi/pen/QWqJdxv")
 >   * Short list: [https://codepen.io/cambuchi/pen/RwLqpra](https://codepen.io/cambuchi/pen/RwLqpra "https://codepen.io/cambuchi/pen/RwLqpra")
-> * [Just the finished code]()
+> * [Just the finished code](https://cambuchi.github.io/blog/posts/pagination-break-down/#finished-pagination-module)
 
 # White-boarding & Design Process
 
@@ -476,7 +476,7 @@ const paginate = (array, current) => {
 
 And with that we are done! Let's take one final look at the entire thing before we look at a live example of it in action.
 
-# Finished Pagination Module
+# Finished Code
 
 ```js
 const paginate = (array, current) => {
@@ -643,21 +643,11 @@ const renderContent = (array, current, itemsPerPage, numPages) => {
 
 With a long list:
 
-<p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="result" data-slug-hash="QWqJdxv" data-user="cambuchi" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-<span>See the Pen <a href="https://codepen.io/cambuchi/pen/QWqJdxv">
-Untitled</a> by Cambuchi (<a href="https://codepen.io/cambuchi">@cambuchi</a>)
-on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+{{< codepen id="QWqJdxv" >}}
 
 With a shorter list:
 
-<p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="result" data-slug-hash="vYeQxLL" data-user="cambuchi" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-<span>See the Pen <a href="https://codepen.io/cambuchi/pen/vYeQxLL">
-Pagination Example Short List</a> by Cambuchi (<a href="https://codepen.io/cambuchi">@cambuchi</a>)
-on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+{{< codepen id="RwLqpra" >}}
 
 # Conclusion
 
