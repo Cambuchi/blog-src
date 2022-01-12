@@ -1,9 +1,9 @@
 +++
 ShowBreadCrumbs = true
-ShowPostNavLinks = false
+ShowPostNavLinks = true
 ShowReadingTime = true
 TocOpen = true
-canonicalURL = ""
+canonicalURL = "https://cambuchi.github.io/blog/posts/lotd-link-evolution-card-finder/"
 comments = false
 date = 2022-01-12T12:51:10Z
 description = "Frustrated at other options, I built my own card finder for a Yu-Gi-Oh video game."
@@ -15,7 +15,7 @@ hidemeta = false
 searchHidden = false
 showToc = true
 summary = "I made a card finder for LOTD: Link Evolution for people like me who don't follow the franchise thus can never remember who \"Gong Strong\" or \"Tetsu Trudge\" etc are."
-tags = ["Mediawiki", "API", "Javascript", "Yu-Gi-Oh"]
+tags = ["COVID", "Mediawiki", "API", "Javascript", "Yu-Gi-Oh"]
 title = "LOTD: Link Evolution Card Finder"
 [cover]
 alt = "LOTD: Link Evolution Card Finder in action"
