@@ -148,7 +148,7 @@ const paginate = (array, current) => {
   // +++ get the current total number of pages, make sure to round up
   let numPages = Math.ceil(array.length / itemsPerPage);
   // +++ target our DOM elements for manipulation
-  const paginateContainer = document.getElementById('paginate-item-container')
+  const paginateItems = document.getElementById('paginate-items');
 };
 ```
 
@@ -161,12 +161,12 @@ const paginate = (array, current) => {
   // get the current total number of pages, make sure to round up
   let numPages = Math.ceil(array.length / itemsPerPage);
   // target our DOM elements for manipulation
-  const paginateContainer = document.getElementById('paginate-item-container')
+  const paginateItems = document.getElementById('paginate-items');
   
   // +++ error: if the array is empty, empty the pagination display
   if (array.length < 1) {
   	// +++ clear the pagination elements
-    paginateContainer.innerHTML = '';
+    paginateItems.innerHTML = '';
     // +++ exit the function so that nothing else is done
     return
   }
@@ -188,12 +188,12 @@ const paginate = (array, current) => {
   // get the current total number of pages, make sure to round up
   let numPages = Math.ceil(array.length / itemsPerPage);
   // target our DOM elements for manipulation
-  const paginateContainer = document.getElementById('paginate-item-container')
+    const paginateItems = document.getElementById('paginate-items');
   
   // error: if the array is empty, empty the pagination display
   if (array.length < 1) {
   	// clear the pagination elements
-    paginateContainer.innerHTML = '';
+    paginateItems.innerHTML = '';
     // exit the function so that nothing else is done
     return
   }
@@ -244,14 +244,14 @@ const renderContent = (array, current, itemsPerPage, numPages) => {
   // increase accordingly (e.g. (0, 5) to (5, 10) etc. )
   let start = 0 + increment;
   let end = itemsPerPage + increment;
-  let data = array.slice(start, end);
+  let activeData = array.slice(start, end);
 
   // target the content container to add items to
   let content = document.getElementById('content');
   // empty out the current contents
   content.innerHTML = '';
   // fill with the new content
-  data.forEach((item) => {
+  activeData.forEach((item) => {
     content.append(item);
   });
 };
@@ -259,10 +259,197 @@ const renderContent = (array, current, itemsPerPage, numPages) => {
 
 With that out of the way, let's add our pagination number items. First we add the logic for when the page numbers are low (in our case less than 7).
 
+> Remember we want it to look like this: `[prev] [1, 2, 3, 4, 5, 6, 7] [next]`
+
 ```js
 const paginate = (array, current) => {
   // ... collapsed previous code for clarity
  
-  // +++ if
+  // +++ add the pagination number items
+  // +++ if the total page number is low, just render all the page numbers
+  if (numPages < 8) {
+    for (let i = 1; i <= numPages; i++) {
+      // +++ create the pagination number element
+      const paginateNum = document.createElement('div');
+      paginateNum.classList = 'paginate-num';
+      paginateNum.textContent = i;
+      // +++ apply styling if number matches current number
+      if (current === i) {
+        paginateNum.classList.add('active');
+      }
+      // +++ apply click event for pagination element
+      paginateNum.onclick = function () {
+        // +++ re-render the pagination elements with pagination item number
+        paginate(array, i);
+        // +++ render content based on pagination item number
+        renderContent(array, i, itemsPerPage, numPages);
+      };
+      // +++ add number into pagination container
+      paginateItems.append(paginateNum);
+    }
+  }
 };
 ```
+
+Since we're going to be adding pagination numbers very often, to maintain [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself "DRY Wikipedia") let's relegate this task to it's own function.
+
+```js
+const addPaginateNum = (array, i, current, itemsPerPage, numPages) => {
+  // target our DOM elements for manipulation
+  const paginateItems = document.getElementById('paginate-items');
+  // create the pagination number element
+  const paginateNum = document.createElement('div');
+  paginateNum.classList = 'paginate-num';
+  paginateNum.textContent = i;
+  // apply styling if number matches current number
+  if (current === i) {
+    paginateNum.classList.add('active');
+  }
+  // apply click event for pagination element
+  paginateNum.onclick = function () {
+    // re-render the pagination elements with pagination item number
+    paginate(array, i);
+    // render content based on pagination item number
+    renderContent(array, i, itemsPerPage, numPages);
+  };
+  // add number into pagination container
+  paginateItems.append(paginateNum);
+};
+```
+
+Now our previous paginate number functionality looks much cleaner.
+
+```js
+const paginate = (array, current) => {
+  // ... collapsed previous code for clarity
+ 
+  // add the pagination number items
+  // if the total page number is low, just render all the page numbers
+  if (numPages < 8) {
+    for (let i = 1; i <= numPages; i++) {
+      addPaginateNum(array, i, current, itemsPerPage, numPages);
+    }
+  }
+};
+```
+
+Before we move ahead with longer page number cases. We can predict that we will need to dynamically add `...` skip items to our pagination items depending on where the current page number is. Let's create a function for this as well so we can call it when we need it.
+
+```js
+// add a "..." pagination item for long pagination lists
+const addPaginateSkip = () => {
+  // target our DOM elements for manipulation
+  const paginateItems = document.getElementById('paginate-items');
+  // create the pagination skip
+  const paginateSkip = document.createElement('div');
+  paginateSkip.classList = 'paginate-skip';
+  paginateSkip.textContent = '. . .';
+  //add the pagination skip
+  paginateItems.append(paginateSkip);
+};
+```
+
+Continuing with functionality, we are going to add our render cases for when the total number of pages is greater than 7. Remember that we have 3 different render cases:
+
+* When the page number is in the early ranges:
+
+  > `[prev] [1, 2, 3, 4, ..., 99, 100] [next]`
+* When the page number is in the middle range:
+
+  > `[prev] [1, ..., 45, 46, 47 ..., 100] [next]`
+* When the page number is in the end ranges:
+
+  > `[prev] [1, 2, ..., 97, 98, 99, 100] [next]`
+
+Let's start with the first case, the early ranges.
+
+```js
+const paginate = (array, current) => {
+  // ... collapsed previous code for clarity
+ 
+  // add the pagination number items
+  // if the total page number is low, just render all the page numbers
+  if (numPages < 8) {
+    for (let i = 1; i <= numPages; i++) {
+      addPaginateNum(array, i, current, itemsPerPage, numPages);
+    }
+  // +++ if the total number of pages is greater than 7
+  } else if (numPages > 7) {
+    // +++ if the current page number is in the early ranges (here less than 4)
+    if (current < 4) {
+      // +++ render all the early numbers
+      for (let i = 1; i < 5; i++) {
+        addPaginateNum(array, i, current, itemsPerPage, numPages);
+      }
+      // +++ render a paginate skip
+      addPaginateSkip();
+      // +++ render the last two page numbers
+      for (let i = numPages - 1; i <= numPages; i++) {
+        addPaginateNum(array, i, current, itemsPerPage, numPages);
+      }
+    }
+  }
+};
+```
+
+Extending this pattern to the next two display cases is relatively straightforward.
+
+```js
+const paginate = (array, current) => {
+  // ... collapsed previous code for clarity
+ 
+  // add the pagination number items
+  // if the total page number is low, just render all the page numbers
+  if (numPages < 8) {
+    for (let i = 1; i <= numPages; i++) {
+      addPaginateNum(array, i, current, itemsPerPage, numPages);
+    }
+    
+  // if the total number of pages is greater than 7
+  } else if (numPages > 7) {
+  
+    // if the current page number is in the early ranges (here less than 4)
+    if (current < 4) {
+      // render all the early numbers
+      for (let i = 1; i < 5; i++) {
+        addPaginateNum(array, i, current, itemsPerPage, numPages);
+      }
+      // render a paginate skip
+      addPaginateSkip();
+      // render the last two page numbers
+      for (let i = numPages - 1; i <= numPages; i++) {
+        addPaginateNum(array, i, current, itemsPerPage, numPages);
+      }
+      
+    // +++ if the current page number is in the middle (3 < current < max - 2)
+    } else if (current > 3 || current < numPages - 2) {
+      // +++ render the first number
+      addPaginateNum(array, 1, current, itemsPerPage, numPages);
+      // +++ render a paginate skip
+      addPaginateSkip();
+      // +++ render the current number and it's adjacent numbers as well
+      for (let i = current - 1; i <= current + 1; i++) {
+        addPaginateNum(array, i, current, itemsPerPage, numPages);
+      }
+      // +++ render a paginate skip
+      addPaginateSkip();
+      // +++ render the last number
+      addPaginateNum(array, numPages, current, itemsPerPage, numPages);
+
+    // +++ if current page number is at the end ranges (greater than max - 3)
+    } else if (current >= numPages - 2) {
+      // +++ render the first two numbers
+      addPaginateNum(array, 1, current, itemsPerPage, numPages);
+      addPaginateNum(array, 2, current, itemsPerPage, numPages);
+      // +++ render a paginate skip
+      addPaginateSkip();
+      // +++ render the end numbers
+      for (let i = numPages - 3; i <= numPages; i++) {
+        addPaginateNum(array, i, current, itemsPerPage, numPages);
+      }
+    }
+  }
+};
+```
+
+g
