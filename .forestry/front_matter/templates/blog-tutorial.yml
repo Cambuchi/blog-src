@@ -8,6 +8,7 @@ fields:
 - type: datetime
   name: date
   label: date
+  default: now
 - type: textarea
   name: description
   label: description
@@ -27,15 +28,19 @@ fields:
 - type: boolean
   name: showToc
   label: showToc
+  default: true
 - type: boolean
   name: TocOpen
   label: TocOpen
+  default: true
 - type: boolean
   name: ShowBreadCrumbs
   label: ShowBreadCrumbs
+  default: true
 - type: boolean
   name: ShowReadingTime
   label: ShowReadingTime
+  default: true
 - type: boolean
   name: hidemeta
   label: hidemeta
@@ -90,9 +95,10 @@ fields:
   - type: text
     name: Text
     label: Text
-    default: Suggest changes...
+    default: Suggest changes
   - type: boolean
     name: appendFilePath
     label: appendFilePath
+    default: true
 pages:
 - content/posts/pagination-break-down.md
