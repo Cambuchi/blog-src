@@ -78,24 +78,24 @@ Pagination requires asking the following questions:
 
 Our pagination will need the following functionality:
 
-1. Render the pagination elements (bold number represents current page):
+1. Render the pagination elements:
    * When there are a few pages, we can just render all of the pages like so:
 
-     > `[prev] [1, 2, 3, `**`4`**`, 5, 6, 7] [next]`
+     > `[prev] [1, 2, 3, 4, 5, 6, 7] [next]`
    * When there are many pages, how we render will depend on the current page number.
      * When the page number is in the early ranges:
 
-       > `[prev] [1, 2, `**`3`**`, 4, ..., 99, 100] [next]`
+       > `[prev] [1, 2, 3, 4, ..., 99, 100] [next]`
      * When the page number is in the middle range:
 
-       > `[prev] [1, ..., 45, `**`46`**`, 47 ..., 100] [next]`
+       > `[prev] [1, ..., 45, 46, 47 ..., 100] [next]`
      * When the page number is in the end ranges:
 
-       > `[prev] [1, 2, ..., 97, 98, `**`99`**`, 100] [next]`
+       > `[prev] [1, 2, ..., 97, 98, 99, 100] [next]`
 
      > Notice how each of the display styles have the same number of pagination items displayed. This is the consistent behavior we want.
 2. Create pagination items that have the following functionality when clicked:
-   * Re-draw the pagination element and update the page numbers of buttons. 
+   * Re-draw the pagination element and update the page numbers of buttons.
    * Update the `previous` and `next` button page number pointers. Because if you were on page 3 those pointed to page 2 and 4 respectively, but if you suddenly jump to page 55 then those buttons need to point to different numbers.
    * Set styling so that the current page number stands out from the others.
    * Send the information to the content rendering function so that the correct slice of the array is rendered into the content area.
@@ -115,4 +115,4 @@ Lets' handle any possible errors that might occur.
 
 # Implementation
 
-Alright, let's build our pagination module! 
+Alright, let's build our pagination module!
