@@ -101,4 +101,5 @@ fields:
     label: appendFilePath
     default: true
 pages:
+- content/posts/lotd-link-evolution-card-finder.md
 - content/posts/pagination-break-down.md
