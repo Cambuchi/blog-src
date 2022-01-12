@@ -1,19 +1,19 @@
 +++
 ShowBreadCrumbs = false
 ShowPostNavLinks = false
-ShowReadingTime = false
+ShowReadingTime = true
 TocOpen = true
 canonicalURL = "cambuchi.github.io/blog/pagination-break-down"
 comments = false
 date = 2022-01-11T05:50:00Z
-description = "Breaking down the process to create a nice looking pagination for your array."
+description = "Breaking down the process to create a nice looking pagination for your site in Javascript."
 disableHLJS = false
 disableShare = false
 hideSummary = false
 hidemeta = false
 searchHidden = false
 showToc = true
-tags = ["JavaScript", "Tutorial", "Code", "Web Development", "HTML", "CSS"]
+tags = ["JavaScript", "Tutorial", "Code", "Web Development", "HTML"]
 title = "Pagination Break Down"
 [cover]
 alt = "Example of pagination."
