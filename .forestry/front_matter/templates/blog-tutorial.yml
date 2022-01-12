@@ -8,6 +8,19 @@ fields:
 - type: datetime
   name: date
   label: date
+- type: textarea
+  name: description
+  label: description
+- name: summary
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: summary
+  description: define the summary for hugo
 - type: list
   name: tags
   label: tags
@@ -18,14 +31,17 @@ fields:
   name: TocOpen
   label: TocOpen
 - type: boolean
+  name: ShowBreadCrumbs
+  label: ShowBreadCrumbs
+- type: boolean
+  name: ShowReadingTime
+  label: ShowReadingTime
+- type: boolean
   name: hidemeta
   label: hidemeta
 - type: boolean
   name: comments
   label: comments
-- type: textarea
-  name: description
-  label: description
 - type: text
   name: canonicalURL
   label: canonicalURL
@@ -41,12 +57,6 @@ fields:
 - type: boolean
   name: searchHidden
   label: searchHidden
-- type: boolean
-  name: ShowReadingTime
-  label: ShowReadingTime
-- type: boolean
-  name: ShowBreadCrumbs
-  label: ShowBreadCrumbs
 - type: boolean
   name: ShowPostNavLinks
   label: ShowPostNavLinks
