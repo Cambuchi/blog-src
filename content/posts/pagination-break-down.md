@@ -31,12 +31,10 @@ appendFilePath = false
 
 What is pagination? Let's say you have a list of items you want to display on your site, displaying the entire list at once can be problematic if it's extremely large or if each list item is resource intensive such as requiring an API call. Pagination is a way to display only a set number of items on your page while allowing easy access to the other items if needed. This is a guide to walk you through the thought process, white-boarding, and implementation of pagination in vanilla JavaScript.
 
-> For those of you that just want the code and don't need the breakdown, I gotchu:
+> For those of you that just want the code and don't need the breakdown, I have you covered:
 >
-> * CodePen examples below:
->   * Long list: [https://codepen.io/cambuchi/pen/QWqJdxv](https://codepen.io/cambuchi/pen/QWqJdxv "https://codepen.io/cambuchi/pen/QWqJdxv")
->   * Short list: [https://codepen.io/cambuchi/pen/RwLqpra](https://codepen.io/cambuchi/pen/RwLqpra "https://codepen.io/cambuchi/pen/RwLqpra")
-> * [Just the finished code](https://cambuchi.github.io/blog/posts/pagination-break-down/#finished-pagination-module)
+> * [CodePen examples](https://cambuchi.github.io/blog/posts/pagination-break-down/#live-examples)
+> * [Just the finished code](https://cambuchi.github.io/blog/posts/pagination-break-down/#finished-code)
 
 # White-boarding & Design Process
 
@@ -49,7 +47,7 @@ Our pagination module will consist of a single function with a couple callbacks,
 
 Here's the entire whiteboard we will use for our function. Please click the image for a full size version. Don't worry we will go over each process one by one:
 
-![Whiteboard for pagination process](https://cambuchi.github.io/blog/uploads/paginate-whiteboard.png "paginate whiteboard")
+[![Whiteboard for pagination process](https://cambuchi.github.io/blog/uploads/paginate-whiteboard.png "paginate whiteboard")](https://cambuchi.github.io/blog/uploads/paginate-whiteboard.png)
 
 Let's break it down:
 
@@ -124,7 +122,7 @@ Lets' handle any possible errors that might occur.
 
 Alright, let's build our pagination module!
 
-> Note: comments with +++ in them indicates that the code below is new
+> Note: comments with `+++` in them indicates that the code below is new
 
 Our HTML model in this example covers just the essentials:
 
@@ -143,7 +141,7 @@ Our HTML model in this example covers just the essentials:
 </body>
 ```
 
-> Note: our previous and next buttons are using the `<` and `>` characters.
+> Note: our previous and next buttons are using &lt; and &gt; to represent the `<` and `>` characters.
 
 First let's enter in our parameters, set our design variables, and do initial prep:
 
@@ -639,11 +637,12 @@ const renderContent = (array, current, itemsPerPage, numPages) => {
 };
 ```
 
-# Live Example
+# Live Examples
 
 With a long list:
 
 {{< codepen id="QWqJdxv" >}}
+
 
 With a shorter list:
 
