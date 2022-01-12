@@ -116,3 +116,153 @@ Lets' handle any possible errors that might occur.
 # Implementation
 
 Alright, let's build our pagination module!
+
+> Note: comments with +++ in them indicates that the code below is new
+
+Our HTML model in this example covers just the essentials:
+
+```html
+<body>
+  <div id="content"></div>
+  <div id="paginate-item-container">
+    <div id="previous">
+   		&lt;
+    </div>
+    <div id="paginate-items"></div>
+    <div id="next">
+    	&gt;
+    </div>
+  </div>
+</body>
+```
+
+> Note: our previous and next buttons are using the `<` and `>` characters.
+
+First let's enter in our parameters, set our design variables, and do initial prep:
+
+```js
+// +++ create the pagination for the current array and page number
+const paginate = (array, current) => {
+  // +++ display 5 items per page
+  let itemsPerPage = 5;
+  // +++ get the current total number of pages, make sure to round up
+  let numPages = Math.ceil(array.length / itemsPerPage);
+  // +++ target our DOM elements for manipulation
+  const paginateContainer = document.getElementById('paginate-item-container')
+};
+```
+
+Next let's handle our errors:
+
+```js
+const paginate = (array, current) => {
+  // display 5 items per page
+  let itemsPerPage = 5;
+  // get the current total number of pages, make sure to round up
+  let numPages = Math.ceil(array.length / itemsPerPage);
+  // target our DOM elements for manipulation
+  const paginateContainer = document.getElementById('paginate-item-container')
+  
+  // +++ error: if the array is empty, empty the pagination display
+  if (array.length < 1) {
+  	// +++ clear the pagination elements
+    paginateContainer.innerHTML = '';
+    // +++ exit the function so that nothing else is done
+    return
+  }
+
+  // +++ error: if current page number is out of range, do nothing
+  if (current < 1 || current > numPages) {
+    // +++ exit the function so that nothing else is done
+    return
+  }
+};
+```
+
+Let's add our functionality in, starting with the previous and next buttons:
+
+```js
+const paginate = (array, current) => {
+  // display 5 items per page
+  let itemsPerPage = 5;
+  // get the current total number of pages, make sure to round up
+  let numPages = Math.ceil(array.length / itemsPerPage);
+  // target our DOM elements for manipulation
+  const paginateContainer = document.getElementById('paginate-item-container')
+  
+  // error: if the array is empty, empty the pagination display
+  if (array.length < 1) {
+  	// clear the pagination elements
+    paginateContainer.innerHTML = '';
+    // exit the function so that nothing else is done
+    return
+  }
+
+  // error: if current page number is out of range, do nothing
+  if (current < 1 || current > numPages) {
+    // exit the function so that nothing else is done
+    return
+  }
+
+  // +++ apply functionality to the previous and next buttons
+  // +++ target the previous DOM elements
+  let next = document.getElementById('next');
+  let previous = document.getElementById('previous');
+  // +++ remove previous event handlers (so event handlers don't pile up)
+  next.onclick = null;
+  previous.onclick = null;
+  // +++ update the previous and next buttons to do the following:
+  // +++ 1. re-render the pagination elements with new current page
+  // +++ 2. send the array and new current page to render correct content
+  previous.onclick = function () {
+    paginate(array, current - 1);
+    renderContent(array, current - 1, itemsPerPage, numPages);
+  };
+  next.onclick = function () {
+    paginate(array, current + 1);
+    renderContent(array, current + 1, itemsPerPage, numPages);
+  };
+};
+```
+
+For completeness sake, here's an example of what a `renderContent` function in this use case might look like:
+
+> Here we assume the array will just be an array of numbers from 1 - 100.
+
+```js
+// render the content
+const renderContent = (array, current, itemsPerPage, numPages) => {
+  // if current page number is out of range, do nothing
+  if (current < 1 || current > numPages) {
+    // exit the function so that nothing else is done
+    return;
+  }
+  // using the page number, determine what slice of the list to render
+  current -= 1;
+  let increment = current * itemsPerPage;
+  // as the page number increases, the bottom and top of the slice should
+  // increase accordingly (e.g. (0, 5) to (5, 10) etc. )
+  let start = 0 + increment;
+  let end = itemsPerPage + increment;
+  let data = array.slice(start, end);
+
+  // target the content container to add items to
+  let content = document.getElementById('content');
+  // empty out the current contents
+  content.innerHTML = '';
+  // fill with the new content
+  data.forEach((item) => {
+    content.append(item);
+  });
+};
+```
+
+With that out of the way, let's add our pagination number items. First we add the logic for when the page numbers are low (in our case less than 7).
+
+```js
+const paginate = (array, current) => {
+  // ... collapsed previous code for clarity
+ 
+  // +++ if
+};
+```
