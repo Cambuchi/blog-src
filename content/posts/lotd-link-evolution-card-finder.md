@@ -9,7 +9,6 @@ date = 2022-01-12T12:51:10Z
 description = "Frustrated at other options, I built my own card finder for a Yu-Gi-Oh video game."
 disableHLJS = false
 disableShare = false
-draft = true
 hideSummary = false
 hidemeta = false
 searchHidden = false
