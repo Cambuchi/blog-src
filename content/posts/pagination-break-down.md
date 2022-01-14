@@ -1,34 +1,43 @@
-+++
-ShowBreadCrumbs = true
-ShowPostNavLinks = true
-ShowReadingTime = true
-TocOpen = true
-canonicalURL = "cambuchi.github.io/blog/pagination-break-down"
-comments = false
-date = 2022-01-11T05:50:00Z
-description = "Breaking down the process to create a nice looking pagination for your site in Javascript."
-disableHLJS = false
-disableShare = false
-hideSummary = false
-hidemeta = false
-searchHidden = false
-showToc = true
-tags = ["JavaScript", "Tutorial", "Code", "Web Development", "HTML"]
-title = "Pagination Break Down"
-summary = "Pagination is a way to display only a set number of items on your page while allowing easy access to the other items if needed. This is a guide to walk you through the thought process, white-boarding, and implementation of pagination in vanilla JavaScript."
-[cover]
-alt = "Example of pagination."
-caption = "Consistent, dynamic pagination that does not shift in size is the goal."
-hidden = false
-image = "https://cambuchi.github.io/blog/uploads/pagination-cover.gif"
-relative = false
-[editPost]
-Text = "Suggest changes"
-URL = "https://github.com/Cambuchi/blog-src/blob/main/content"
-appendFilePath = true
-
-
-+++
+---
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowReadingTime: true
+TocOpen: true
+canonicalURL: cambuchi.github.io/blog/pagination-break-down
+comments: false
+date: 2022-01-11T05:50:00.000Z
+description: >-
+  Breaking down the process to create a nice looking pagination for your site in
+  Javascript.
+disableHLJS: false
+disableShare: false
+hideSummary: false
+hidemeta: false
+searchHidden: false
+showToc: true
+tags:
+  - JavaScript
+  - Tutorial
+  - Code
+  - Web Development
+  - HTML
+title: Pagination Break Down
+summary: >-
+  Pagination is a way to display only a set number of items on your page while
+  allowing easy access to the other items if needed. This is a guide to walk you
+  through the thought process, white-boarding, and implementation of pagination
+  in vanilla JavaScript.
+cover:
+  alt: Example of pagination.
+  caption: 'Consistent, dynamic pagination that does not shift in size is the goal.'
+  hidden: false
+  image: 'https://cambuchi.github.io/blog/uploads/pagination-cover.gif'
+  relative: false
+editPost:
+  Text: Suggest changes
+  URL: 'https://github.com/Cambuchi/blog-src/blob/main/content'
+  appendFilePath: true
+---
 # Introduction
 
 What is pagination? Let's say you have a list of items you want to display on your site, displaying the entire list at once can be problematic if it's extremely large or if each list item is resource intensive such as requiring an API call. Pagination is a way to display only a set number of items on your page while allowing easy access to the other items if needed. This is a guide to walk you through the thought process, white-boarding, and implementation of pagination in vanilla JavaScript.

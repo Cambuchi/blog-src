@@ -1,33 +1,44 @@
-+++
-ShowBreadCrumbs = true
-ShowPostNavLinks = true
-ShowReadingTime = true
-TocOpen = false
-canonicalURL = "https://cambuchi.github.io/blog/posts/lotd-link-evolution-card-finder/"
-comments = false
-date = 2022-01-12T12:51:10Z
-description = "Frustrated at other options, I built my own card finder for a Yu-Gi-Oh video game."
-disableHLJS = false
-disableShare = false
-hideSummary = false
-hidemeta = false
-searchHidden = false
-showToc = true
-summary = "I made a card finder for LOTD: Link Evolution for people like me who don't follow the franchise thus can never remember who \"Gong Strong\" or \"Tetsu Trudge\" etc are."
-tags = ["COVID", "Mediawiki", "API", "Javascript", "Yu-Gi-Oh"]
-title = "LOTD: Link Evolution Card Finder"
-[cover]
-alt = "LOTD: Link Evolution Card Finder in action"
-caption = "Images and information helps a lot when you're trying to create the perfect deck."
-hidden = false
-image = "https://cambuchi.github.io/blog/uploads/card-finder-cover.png"
-relative = false
-[editPost]
-Text = "Suggest changes"
-URL = "https://github.com/Cambuchi/blog-src/blob/main/content"
-appendFilePath = true
-
-+++
+---
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowReadingTime: true
+TocOpen: false
+canonicalURL: 'https://cambuchi.github.io/blog/posts/lotd-link-evolution-card-finder/'
+comments: false
+date: 2022-01-12T12:51:10.000Z
+description: >-
+  Frustrated at other options, I built my own card finder for a Yu-Gi-Oh video
+  game.
+disableHLJS: false
+disableShare: false
+hideSummary: false
+hidemeta: false
+searchHidden: false
+showToc: true
+summary: >-
+  I made a card finder for LOTD: Link Evolution for people like me who don't
+  follow the franchise thus can never remember who "Gong Strong" or "Tetsu
+  Trudge" etc are.
+tags:
+  - COVID
+  - Mediawiki
+  - API
+  - Javascript
+  - Yu-Gi-Oh
+title: 'LOTD: Link Evolution Card Finder'
+cover:
+  alt: 'LOTD: Link Evolution Card Finder in action'
+  caption: >-
+    Images and information helps a lot when you're trying to create the perfect
+    deck.
+  hidden: false
+  image: 'https://cambuchi.github.io/blog/uploads/card-finder-cover.png'
+  relative: false
+editPost:
+  Text: Suggest changes
+  URL: 'https://github.com/Cambuchi/blog-src/blob/main/content'
+  appendFilePath: true
+---
 # I caught COVID.
 
 On the 28th of Dec I developed COVID-19 symptoms, but thankfully the symptoms were very mild (thanks vaccine!). During my 2 week quarantine and recovery I got into Yu-Gi-Oh through "Legacy of the Duelist: Link Evolution". Finding out where cards were was a huge pain because I have not kept up with the franchise and over 10,000 cards were hidden behind character specific booster packs & challenge duels. Other card finders did not have any visual aid or provide card information so they were useless to me because I had no idea who "Gong Strong" or "Akiza Izinski" etc were. Frustrated, I built my own card finder that utilizes the Yugipedia mediawiki API to grab images and information.
