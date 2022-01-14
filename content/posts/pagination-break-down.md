@@ -1,6 +1,6 @@
 +++
-ShowBreadCrumbs = false
-ShowPostNavLinks = false
+ShowBreadCrumbs = true
+ShowPostNavLinks = true
 ShowReadingTime = true
 TocOpen = true
 canonicalURL = "cambuchi.github.io/blog/pagination-break-down"
@@ -23,9 +23,9 @@ hidden = false
 image = "https://cambuchi.github.io/blog/uploads/pagination-cover.gif"
 relative = false
 [editPost]
-Text = ""
-URL = ""
-appendFilePath = false
+Text = "Suggest changes"
+URL = "https://github.com/Cambuchi/blog-src/blob/main/content"
+appendFilePath = true
 
 
 +++

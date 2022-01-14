@@ -24,7 +24,7 @@ image = "https://cambuchi.github.io/blog/uploads/card-finder-cover.png"
 relative = false
 [editPost]
 Text = "Suggest changes"
-URL = "https://github.com/Cambuchi/blog-src/issues"
+URL = "https://github.com/Cambuchi/blog-src/blob/main/content"
 appendFilePath = true
 
 +++

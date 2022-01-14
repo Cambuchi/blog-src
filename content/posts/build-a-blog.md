@@ -141,7 +141,7 @@ The following instructions are specific for Windows 10. Mac and Linux users can 
    3. Click on `Environment Variables...` on the bottom right.
       ![System Properties](https://cambuchi.github.io/blog/uploads/system-properties.png)
    4. Under `User variables` double click on `PATH` (might be `Path`).
-      * If you are an admin and they only user of your computer feel free to add to the `PATH` under `System variables`.
+      * If you are an admin and the only user of your computer feel free to add to the `PATH` under `System variables`.
    5. Click on `New`.
    6. Type `C:\Hugo\bin` hit `enter` and then click `OK`.
    7. Click `OK` on the Environment Variables window, and then `OK` on the System Properties window.
