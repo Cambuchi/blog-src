@@ -33,10 +33,12 @@ appendFilePath = true
 
 What is pagination? Let's say you have a list of items you want to display on your site, displaying the entire list at once can be problematic if it's extremely large or if each list item is resource intensive such as requiring an API call. Pagination is a way to display only a set number of items on your page while allowing easy access to the other items if needed. This is a guide to walk you through the thought process, white-boarding, and implementation of pagination in vanilla JavaScript.
 
-> For those of you that just want the code and don't need the breakdown, I have you covered:
->
-> * [CodePen examples](https://cambuchi.github.io/blog/posts/pagination-break-down/#live-examples)
-> * [Just the finished code](https://cambuchi.github.io/blog/posts/pagination-break-down/#finished-code)
+# TL:DR
+
+For those of you that just want the code and don't need the breakdown:
+
+* [CodePen examples](https://cambuchi.github.io/blog/posts/pagination-break-down/#live-examples)
+* [Just the finished code](https://cambuchi.github.io/blog/posts/pagination-break-down/#finished-code)
 
 # White-boarding & Design Process
 

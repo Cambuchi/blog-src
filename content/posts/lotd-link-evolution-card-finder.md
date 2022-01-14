@@ -2,7 +2,7 @@
 ShowBreadCrumbs = true
 ShowPostNavLinks = true
 ShowReadingTime = true
-TocOpen = true
+TocOpen = false
 canonicalURL = "https://cambuchi.github.io/blog/posts/lotd-link-evolution-card-finder/"
 comments = false
 date = 2022-01-12T12:51:10Z
@@ -34,11 +34,11 @@ On the 28th of Dec I developed COVID-19 symptoms, but thankfully the symptoms we
 
 Searching out archetypes like "Vampire", "Elemental Hero", "Utopia", or "Blue-Eyes" and looking at all the cool card art on my phone was also a nice bedridden activity. Hopefully this is useful to someone else out there!
 
-## See Live At:
+# See Live At:
 
 [LOTD: Link Evolution Card Finder](https://cambuchi.github.io/LOTD-Link-Evolution-Card-Finder/)
 
-## Features
+# Features
 
 * Image for the booster pack characters, so that those not knowledgeable about the Yu-Gi-Oh franchise can still target the correct cards.
 * Pulls card images from the Yugipedia mediawiki API so that you can preview the card's stats and effects.
@@ -46,23 +46,23 @@ Searching out archetypes like "Vampire", "Elemental Hero", "Utopia", or "Blue-Ey
 * Resetting delay on key-up event for the search to prevent flooding the API with requests.
 * Straightforward mobile and desktop UI
 
-## Built With
+# Built With
 
 * Coded lovingly in vanilla Javascript and CSS.
 * Built with [Webpack](https://webpack.js.org/)
 * Hosted on [GitHub Pages](https://pages.github.com/)
 
-## Improvements
+# Improvements
 
 Features to be added in the future:
 
 * Card saving feature to create your own searchable list.
 
-## Special Thanks
+# Special Thanks
 
 * This [google sheet](https://docs.google.com/spreadsheets/d/19tRadwIu9HH8nKa81Vk4XJSmZdwCy5k2pyACB6ma0yo/) by reddit user /u/Sephiroth0327 that provided the card names, booster locations, and alternate farm locations.
 * [Yugipedia](https://yugipedia.com/wiki/Yugipedia) and the mediawiki API for providing the card and booster images.
 
-## Contributing
+# Contributing
 
 Contributions, issues, and feature requests are welcome!
