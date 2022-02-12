@@ -3,7 +3,7 @@ ShowBreadCrumbs = true
 ShowPostNavLinks = false
 ShowReadingTime = true
 TocOpen = true
-canonicalURL = ""
+canonicalURL = "https://cambuchi.github.io/blog/posts/digital-apron-modern-meal-planning"
 comments = false
 date = 2022-02-11T23:27:49Z
 description = "I built a meal planner that captures the functionality of modern meal subscription services."
@@ -30,7 +30,7 @@ appendFilePath = true
 +++
 # I tried a meal kit service.
 
-And there's a lot that I actually enjoyed. However, as someone who cooks at home extremely often, there were some big pitfalls as well. I wanted this experience in my cooking work flow at home, so I created **Digital Apron**, a meal planner that captures the intuitiveness and functionality of modern meal subscription services.
+And there's a lot that I actually enjoyed! However, as someone who cooks at home extremely often, there were some big pitfalls as well. I wanted this experience in my cooking work flow at home, so I created **Digital Apron**, a meal planner that captures the intuitiveness and functionality of modern meal subscription services.
 
 # See live at:
 
@@ -89,7 +89,8 @@ Digital apron was built to capture as much of the meal kit experience as possibl
 
 * Shout-out to my sister Chau Nguyen and Tony Tran for finding amazing deals on Hello Fresh/Every Plate/Blue Apron so that we got to try out these services for extremely cheap. Without them I would never have had the inspiration to make Digital Apron.
 * Friends and family who gave feedback on the alpha versions of this, you guys rock!
-* Blue Apron/Hello Fresh/Every Plate for the work flow template.
+* Blue Apron/Hello Fresh/Every Plate for the great deals and novel experience.
+* Luke Wilson from [ManageXR ](https://www.managexr.com/ "ManageXR")for suggesting Firebase for my back-end.
 
 # Contributing
 
