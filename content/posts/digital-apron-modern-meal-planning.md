@@ -1,6 +1,6 @@
 +++
 ShowBreadCrumbs = true
-ShowPostNavLinks = false
+ShowPostNavLinks = true
 ShowReadingTime = true
 TocOpen = true
 canonicalURL = "https://cambuchi.github.io/blog/posts/digital-apron-modern-meal-planning"
