@@ -101,5 +101,6 @@ fields:
     label: appendFilePath
     default: true
 pages:
+- content/posts/digital-apron-modern-meal-planning.md
 - content/posts/lotd-link-evolution-card-finder.md
 - content/posts/pagination-break-down.md
