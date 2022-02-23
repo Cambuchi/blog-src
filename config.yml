@@ -1,7 +1,7 @@
-baseURL: "https://cambuchi.github.io/blog"
+baseURL: 'https://cambuchi.github.io/blog'
 title: cam nguyen | blog
 paginate: 5
-theme: "PaperMod"
+theme: 'PaperMod'
 copyright: © [Cam Nguyen](https://cambuchi.github.io/blog).
 
 enableRobotsTXT: true
@@ -28,8 +28,8 @@ params:
   keywords: [Blog, Portfolio, Coding]
   # author: Cam Nguyen
   # author: ["Me", "You"] # multiple authors
-  images: ["catgod.jpg"]
-  DateFormat: "January 2, 2006"
+  images: ['catgod.jpg']
+  DateFormat: 'January 2, 2006'
   defaultTheme: dark #auto, dark, light
   disableThemeToggle: false
 
@@ -49,14 +49,14 @@ params:
   assets:
     disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "files/favicon.ico"
-    favicon16x16: "files/favicon-16x16.png"
-    favicon32x32: "files/favicon-32x32.png"
-    apple_touch_icon: "files/apple-touch-icon.png"
-    safari_pinned_tab: "files/favicon-32x32.png"
+    favicon: 'files/favicon.ico'
+    favicon16x16: 'files/favicon-16x16.png'
+    favicon32x32: 'files/favicon-32x32.png'
+    apple_touch_icon: 'files/apple-touch-icon.png'
+    safari_pinned_tab: 'files/favicon-32x32.png'
 
   label:
-    text: "cam nguyen | blog"
+    text: 'cam nguyen | blog'
     # icon: teapot.png
     # iconHeight: 35
 
@@ -64,8 +64,8 @@ params:
   profileMode:
     enabled: false # needs to be explicitly set
     title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    subtitle: 'This is subtitle'
+    imageUrl: '<img location>'
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
@@ -80,29 +80,26 @@ params:
     Title: "Hi, I'm Cam!"
     Image: >
       ![Cam Nguyen Headshot](files/me.jpg#me)
-    Content: 
-      Welcome to my blog. This is a place for me to mostly talk about my
-      developments in coding. Based in California, I am a first generation 
+    Content: Welcome to my blog. This is a place for me to mostly talk about my
+      developments in coding. Based in California, I am a first generation
       immigrant from Vietnam currently trying to become a software developer.
-    Connect:
-      You can reach me at cam.manh.nguyen@gmail.com.
-    Connect2:
-      Let's keep in touch!
+      Previously at Azel, Ridge, Princeton.
+    Connect: You can reach me at cam.manh.nguyen@gmail.com.
+    Connect2: Let's keep in touch!
 
   socialIcons:
     - name: linkedin
-      url: "https://www.linkedin.com/in/cam-nguyen-6a1ab257/"
+      url: 'https://www.linkedin.com/in/cam-nguyen-6a1ab257/'
     - name: github
-      url: "https://github.com/Cambuchi"
-
+      url: 'https://github.com/Cambuchi'
 
   analytics:
     google:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: 'XYZabc'
     bing:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: 'XYZabc'
     yandex:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: 'XYZabc'
 
   cover:
     hidden: true # hide everywhere but not in structured data
@@ -110,8 +107,8 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/Cambuchi/blog-src/blob/main/content"
-    Text: "Suggest Changes" # edit text
+    URL: 'https://github.com/Cambuchi/blog-src/blob/main/content'
+    Text: 'Suggest Changes' # edit text
     appendFilePath: true # to append file path to Edit link
 
   # for search
@@ -123,7 +120,7 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content", "desc", "entry-header"]
+    keys: ['title', 'permalink', 'summary', 'content', 'desc', 'entry-header']
 menu:
   main:
     - identifier: home
@@ -149,11 +146,11 @@ menu:
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: false
 markup:
-    highlight:
-        anchorLineNos: false
-        codeFences: true
-        guessSyntax: true
-        lineNos: true
-        style: base16-snazzy
-        # noClasses: true
-        tabWidth: 2
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: base16-snazzy
+    # noClasses: true
+    tabWidth: 2

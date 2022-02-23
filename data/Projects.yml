@@ -1,24 +1,29 @@
+- id: Digital Apron
+  link: https://digital-apron.web.app/
+  desc: Meal planning web-app that captures the intuitiveness and functionality
+    of modern meal subscription services. My first full-stack project.
+
 - id: To Do List
   link: https://cambuchi.github.io/odin-todo-list/
-  desc: Fully featured to-do-list app written entirely in javascript and built 
-        with webpack. Uses local storage to keep track of task history.
+  desc: Fully featured to-do-list app written entirely in javascript and built
+    with webpack. Uses local storage to keep track of task history.
 
 - id: Yu-Gi-Oh! LOTD Link Evolution Card Finder
   link: https://cambuchi.github.io/LOTD-Link-Evolution-Card-Finder/
-  desc: When I had Covid, during my 2 week quarantine and recovery I got into 
-        Yu-Gi-Oh through "Legacy of the Duelist Link Evolution". Having not 
-        kept up with the franchise, finding out where cards were was a huge 
-        pain because over 10,000 cards were hidden behind character related 
-        booster packs & challenge duels. Other card finders did not have any 
-        visual aid or provide card information so they were useless to me 
-        because I had no idea who "Gong Strong" or "Akiza Izinski" etc were. 
-        This card finder utilizes the Yugipedia mediawiki API to grab images 
-        and extra information. 
+  desc: When I had Covid, during my 2 week quarantine and recovery I got into
+    Yu-Gi-Oh through "Legacy of the Duelist Link Evolution". Having not
+    kept up with the franchise, finding out where cards were was a huge
+    pain because over 10,000 cards were hidden behind character related
+    booster packs & challenge duels. Other card finders did not have any
+    visual aid or provide card information so they were useless to me
+    because I had no idea who "Gong Strong" or "Akiza Izinski" etc were.
+    This card finder utilizes the Yugipedia mediawiki API to grab images
+    and extra information.
 
 - id: Unbeatable Tic-Tac-Toe
   link: https://cambuchi.github.io/odin-tictactoe-ai/
-  desc: Play against an unbeatable Tic Tac Toe opponent. Written in Javascript 
-        and utilizing min-max recursion strategy to determine AI moves. 
+  desc: Play against an unbeatable Tic Tac Toe opponent. Written in Javascript
+    and utilizing min-max recursion strategy to determine AI moves.
 
 - id: Potions++
   link: https://codepen.io/cambuchi/full/BaWPJBj
@@ -26,14 +31,14 @@
 
 - id: Sagacious Saga Bot
   link: https://github.com/Cambuchi/Sagacious-Saga-Bot
-  desc: A python app to automatically play Sagacious Saga using floodfill 
-        recursion strategy. 
+  desc: A python app to automatically play Sagacious Saga using floodfill
+    recursion strategy.
 
 - id: The Library
   link: https://cambuchi.github.io/odin-library/
-  desc: Web app to keep track of which books in your library have been read 
-        with an easy to use UI. Uses Google Books API to download book covers 
-        and page counts.
+  desc: Web app to keep track of which books in your library have been read
+    with an easy to use UI. Uses Google Books API to download book covers
+    and page counts.
 
 - id: Emmet Abbreviation Documentation Library
   link: https://codepen.io/cambuchi/full/YzZdVwM
@@ -41,13 +46,12 @@
 
 - id: Basic Calculator
   link: https://cambuchi.github.io/Calculator/
-  desc: A simple calculator built with javascript and made pretty with html 
-        and css. Features optional keyboard inputs.
+  desc: A simple calculator built with javascript and made pretty with html
+    and css. Features optional keyboard inputs.
 
 - id: Manga Updates Webscraper
   link: https://github.com/Cambuchi/Manga-Updates-Webscraper
-  desc: Script that scrapes information on mangas from mangaupdates.com and 
-        writes the data into a csv file. Dependent on requests and bs4. Used to 
-        help determine which mangas are good targets for translating. Example 
-        of 10 mangas scraped provided.
-
+  desc: Script that scrapes information on mangas from mangaupdates.com and
+    writes the data into a csv file. Dependent on requests and bs4. Used to
+    help determine which mangas are good targets for translating. Example
+    of 10 mangas scraped provided.
